@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.Panel {
+	margin: 0px;
+	padding: 0px;
+}
+
+.PanelTab {
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 5px;
+	cursor: pointer;
+	font-size: 14px;
+	border-bottom-color: #000;
+}
+
+.PanelContent {
+	margin: 0px;
+	padding: 0px 0px 20px 0px;
+	color: #766503;
+}
+
+.PanelTab a {
+	color: #666600;
+	text-decoration: none;
+	padding-bottom: 10px;
+}
+
+
+.PanelOpen .PanelTab { 
+	background-color: #FFFFFF;
+
+}
+
+.PanelTabHover,  .PanelOpen .PanelTabHover {
+	background-color: #FFFFFF;
+	color: #766503;
+	font-size: 14px;
+}
+
+.PanelFocused .PanelTab {
+	background-color: #FFFFFF;
+	color: #766503;
+	outline: none;
+}

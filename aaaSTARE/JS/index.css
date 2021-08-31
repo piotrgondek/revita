@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+
+
+
+body  {
+	background: #FFFFFF;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: justify; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #766503;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #99CC00;
+	text-decoration: none;
+}
+a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #006600;
+	text-decoration: none;
+}
+a:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #006600;
+	text-decoration: none;
+}
+.o #containero {
+	width: 100%;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	background: #FFFFFF;
+	margin: 0 auto;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	padding-top: 10px;
+}
+
+.o #banero {
+	width: 840px;
+	margin: 0 auto;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	background-color: #FFFFFF;
+	background-image: url(images/bgr.jpg);
+	background-repeat: repeat-x;
+}
+
+
+.o #headero {
+	padding: 0px 10px 0 20px;
+	background-image: url(images/bgr.jpg);
+	background-repeat: repeat-x;
+} 
+
+.o #mainContento {
+	padding: 0; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	background: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+.t #container {
+	width: 840px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #FFFFFF;
+	margin: 0 auto;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	padding-left: 10px;
+} 
+
+
+.t #header {
+	padding: 0;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+	background-color: #99CC33;
+} 
+
+.t #sidebar1 {
+	float: left; /* since this element is floated, a width must be given */
+	width: 210px; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	background: #FFFFFF;
+	padding: 0;
+	margin-top: 10px;
+}
+.t #mainContent {
+	margin: 0 0 0 220px; /* the left margin on this div element creates the column down the left side of the page - no matter how much content the sidebar1 div contains, the column space will remain. You can remove this margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends. */
+	padding: 0; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	width: 600px;
+	margin-top: 10px;
+	text-align: justify;
+} 
+.t #footer {
+	padding: 0 20px 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#FFFFFF;
+	border-top: 1px solid;
+	border-top-color: #99CC00;
+	text-align: right;
+} 
+
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+.zdjecietxt {
+	border: 1px solid #99CC00;
+	padding: 3px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+	margin-top: 0px;
+	margin-left: 0px;
+	float: left;
+
+}
+.zdjecie {
+	background-color: #FFFFFF;
+	padding: 4px;
+	border: 1px solid #006600;
+	border-right-color: #006600;
+}
+.zdjecie:hover {
+	background-color: #FFFFFF;
+	padding: 4px;
+	border-color: #99CC00;
+	border: 1px solid #99CC00;
+}
+
+.zdjecieskier {
+	background-color: #FFFFFF;
+	padding: 4px;
+	border: 1px solid #FFFFFF;
+	border-right-color: #FFFFFF;
+}
+.zdjecieskier:hover {
+	background-color: #FFFFFF;
+	padding: 4px;
+	border-color: #99CC00;
+	border: 1px solid #99CC00;
+}
+
+.font13cziel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #99CC00;
+}
+.textdolewej             {
+	text-align: left;
+	padding-left: 10px;
+}
+.textindent {
+	text-indent: 20px;
+}
+
+.tab {
+	border-bottom: 1px solid #99CC00;
+}
+.stopka {
+	font-size: 9px;
+	color: #99CC66;
+}
+.tabz {
+	border: 1px solid #99CC00;
+
+}
+

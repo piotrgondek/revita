@@ -1,0 +1,503 @@
+@charset "utf-8";
+body  {
+	font-family: Verdana, Geneva, sans-serif;
+	background: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #766503;
+	background-image: url(images/bgr189px.jpg);
+	background-repeat: repeat-x;
+	font-size: 11px;
+}
+a:link, a:visited {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: normal;
+	color: #060;
+	text-decoration: none;
+}
+a:hover {
+	font-family: Verdana, Geneva, sans-serif;
+	color: #9C0;
+	text-decoration: none;
+}
+
+a:focus {
+	outline:none;
+}
+.revita #kontener{ 
+	width: 840px;
+	background: #FFFFFF;
+	margin: 0 auto;
+	text-align: left;
+	color: #766503;
+	font-size: 11px;
+	font-family: Verdana, Geneva, sans-serif;
+	
+} 
+.revita #naglowek {
+	background: #FFFFFF;
+	padding: 10px 0 0 0;
+} 
+
+.revita #menupion {
+	float: left; 
+	width: 210px; 
+	background: #FFFFFF;
+	padding: 0;
+	margin-top: 10px;
+}
+ul {
+	margin: 20px 0 20px 0;
+}
+
+li{
+	color:#090;
+	font-size:14px;
+	margin: 0 0 8px 0;
+}
+li span {
+	color: #766503;
+	font-size: 13px;
+	margin: 0 0 0px 0;
+}
+.revita #main {
+	margin: 0 0 0 0px;
+	padding: 0 0 30px 0;
+	width: 100%;
+	margin-top: 10px;
+	text-align: justify;
+	color: #766503;
+	font-size: 13px;
+	font-family: Verdana, Geneva, sans-serif;
+} 
+.revita h1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	color: #99CC00;
+}
+.revita h2 {
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.clearfloat { 
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+.revita #footer {
+	padding: 0px; 
+	background:#FFFFFF;
+	border-top: 1px solid;
+	border-top-color: #99CC00;
+	text-align: center;
+	font-size:9px;
+	font-family: Verdana, Geneva, sans-serif;
+} 
+
+
+.dziel {
+	padding-left:2px; 
+	padding-right:2px
+}
+.zdjecietxt {
+	border: 1px solid #99CC00;
+	padding: 3px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+	margin-top: 0px;
+	margin-left: 0px;
+	float: left;
+
+}
+.zdjecie {
+	background-color: #FFFFFF;
+	padding: 4px;
+	border: 1px solid #CCC;
+}
+.zdjecie:hover {
+	background-color: #FFFFFF;
+	padding: 4px;
+	border-color: #99CC00;
+	border: 1px solid #99CC00;
+	border-style: solid;
+}
+
+.errorText{
+	
+	margin:10% 0;
+	font-size:24px;
+	text-align:center;
+	
+}
+
+.errorText > a{
+	
+	text-decoration:underline;
+	
+}
+
+
+.textdolewej             {
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 0px;
+}
+.textindent {
+	text-indent: 20px;
+}
+
+p {
+	margin:25px 0;
+}
+.tab {
+	border-bottom: 1px solid #99CC00;
+}
+.stopka {
+	font-size: 9px;
+	color: #99CC66;
+	padding-top: 10px;
+	text-align:right
+}
+.tabz {
+	border: 1px solid #99CC00;
+
+}
+.font13cziel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #090;
+}
+
+.navbox {
+	position: relative;
+	float: left;
+}
+
+.navbox ul.nav {
+	list-style: none;
+	width:210px;
+    margin:0 auto;
+	position: relative;
+	display: block;
+	padding: 0;
+	background: url(shad2.png)) no-repeat;
+	-webkit-background-size: 50% 100%;
+}
+
+.navbox li {
+	margin: 5px 0 0 0;
+	float:left;
+}
+
+.navbox ul.nav li a {
+	transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	background: #006600;
+	color: #FFFFFF;
+	font-weight:bold;
+	padding: 7px 15px 7px 15px;
+	-webkit-border-top-right-radius: 10px;
+ 	-webkit-border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+ 	border-top-left-radius: 10px;
+	width: 170px;
+	display: block;
+	text-decoration: none;
+	box-shadow: 2px 2px 4px #888;
+	-webkit-box-shadow: 2px 2px 4px #888;
+}
+
+.navbox ul.nav li a:hover {
+	background: #99CC00;
+	color: #FFFFFF;
+	font-weight:bold;
+	padding: 7px 15px 7px 15px;
+}
+
+.kac-sm-panel{
+position: fixed;
+top: 150px;
+right: -100px;
+}
+.kac-sm-panel ul{
+list-style-type: none;
+}
+.kac-sm-panel li{
+border-radius: 5px;
+width: 140px;
+height: 40px;
+padding: 5px;
+margin: 3px 0px;
+position: relative;
+right: 0px;
+box-sizing: initial;
+text-align: left;
+}
+.kac-sm-panel span{
+width: 80px;
+display: inline;
+font-size: 16px;
+vertical-align: middle;
+padding-bottom: 13px;
+position: absolute;
+top: 15px;
+left: 50px;
+color: #FFF;
+font-family: sans-serif;
+font-weight: 700;
+}
+.kac-sm-text-black {
+color: #000000 !important;
+}
+.kac-sm-panel a{
+text-decoration: none;
+}
+.kac-sm-block{
+transition: right 0.5s ease-out 0s;
+}
+.kac-sm-block:hover{
+right: 90px;
+}
+
+.kac-sm-fb{
+background: none repeat scroll 0% 0% #295C9E;
+}.kac-sm-gplus{
+background:  none repeat scroll 0% 0% #DA2128;
+}.kac-sm-pkt{
+background:  none repeat scroll 0% 0% #FFFFFF;
+}.kac-sm-twitter{
+background:  none repeat scroll 0% 0% #16B9ED;
+}.kac-sm-blog{
+background:  none repeat scroll 0% 0% #0171BB;
+}.kac-sm-pinterest{
+background:  none repeat scroll 0% 0% #D73532;
+}.kac-sm-youtube{
+background:  none repeat scroll 0% 0% #E32C26;
+}.kac-sm-goldenline{
+background:  none repeat scroll 0% 0% #FFFFFF;
+}.kac-sm-allegro{
+background:  none repeat scroll 0% 0% #FF5A00;
+}.kac-sm-linkedin{
+background:  none repeat scroll 0% 0% #0097BD;
+}.kac-sm-googlekspert{
+background:  none repeat scroll 0% 0% #FFFFFF;
+}.kac-sm-payback{
+background:  none repeat scroll 0% 0% #00349A;
+}
+@media screen and (max-width:640px){ .kac-sm-panel{display:none;} }
+
+@charset "UTF-8";
+
+/* SpryMenuBarHorizontal.css - version 0.6 - Spry Pre-Release 1.6.1 */
+
+/* Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. */
+
+/*******************************************************************************
+
+ LAYOUT INFORMATION: describes box model, positioning, z-order
+
+ *******************************************************************************/
+
+/* The outermost container of the Menu Bar, an auto width box with no margin or padding */
+ul.MenuBarHorizontal
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 12px;
+	cursor: default;
+}
+/* Set the active Menu Bar with this class, currently setting z-index to accomodate IE rendering bug: http://therealcrisp.xs4all.nl/meuk/IE-zindexbug.html */
+ul.MenuBarActive
+{
+	z-index: 1000;
+}
+/* Menu item containers, position children relative to this container and are a fixed width */
+ul.MenuBarHorizontal li
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 12px;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+	width: 275px;
+	float: left;
+
+}
+/* Submenus should appear below their parent (top: 0) with a higher z-index, but they are initially off the left side of the screen (-1000em) */
+ul.MenuBarHorizontal ul
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	z-index: 1020;
+	cursor: default;
+	width: 275px;
+	position: absolute;
+	left: -1000em;	
+	filter:alpha(opacity=90);
+	opacity: 0.9;
+	-moz-opacity:0.9;
+	
+
+}
+/* Submenu that is showing with class designation MenuBarSubmenuVisible, we set left to auto so it comes onto the screen below its parent menu item */
+ul.MenuBarHorizontal ul.MenuBarSubmenuVisible
+{
+	left: auto;
+
+}
+/* Menu item containers are same fixed width as parent */
+ul.MenuBarHorizontal ul li
+{
+	width: 275px;
+}
+/* Submenus should appear slightly overlapping to the right (95%) and up (-5%) */
+ul.MenuBarHorizontal ul ul
+{
+	position: absolute;
+	margin: -5% 0 0 95%;
+}
+/* Submenu that is showing with class designation MenuBarSubmenuVisible, we set left to 0 so it comes onto the screen */
+ul.MenuBarHorizontal ul.MenuBarSubmenuVisible ul.MenuBarSubmenuVisible
+{
+	left: auto;
+	top: 0;
+
+}
+
+/*******************************************************************************
+
+ DESIGN INFORMATION: describes color scheme, borders, fonts
+
+ *******************************************************************************/
+ul.MenuBarHorizontal li
+{
+	border-bottom:1px solid #FFFFFF;
+	border-right:1px solid #FFFFFF;
+}
+/* Submenu containers have borders on all sides */
+ul.MenuBarHorizontal ul
+{
+	border-bottom:1px solid #FFFFFF;
+
+}
+/* Menu items are a light gray block with padding and no text decoration */
+ul.MenuBarHorizontal a
+{
+	transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	display: block;
+	cursor: pointer;
+	background-color: #006600;
+	padding: 7px 8px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	
+}
+/* Menu items that have mouse over or focus have a blue background and white text */
+ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
+{
+	background-color: #99CC00;
+	color: #FFF;
+
+}
+/* Menu items that are open with submenus are set to MenuBarItemHover with a blue background and white text */
+ul.MenuBarHorizontal a.MenuBarItemHover, ul.MenuBarHorizontal a.MenuBarItemSubmenuHover, ul.MenuBarHorizontal a.MenuBarSubmenuVisible
+{
+	background-color: #99CC00;
+	color: #FFF;
+
+}
+
+/*******************************************************************************
+
+ SUBMENU INDICATION: styles if there is a submenu under a given menu item
+
+ *******************************************************************************/
+
+/* Menu items that have a submenu have the class designation MenuBarItemSubmenu and are set to use a background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarHorizontal a.MenuBarItemSubmenu
+{
+	background-image: url(SpryAssets/SpryMenuBarDownHover.gif);
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+	border-top-right-radius: 10px;
+ 	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+ 	-webkit-border-top-left-radius: 10px;
+	border-bottom:#FFFFFF solid 1px;
+	height: 20px;
+	line-height: 19px;
+
+}
+/* Menu items that have a submenu have the class designation MenuBarItemSubmenu and are set to use a background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarHorizontal ul a.MenuBarItemSubmenu
+{
+	background-image: url(SpryAssets/SpryMenuBarRight.gif);
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+	
+}
+/* Menu items that are open with submenus have the class designation MenuBarItemSubmenuHover and are set to use a "hover" background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarHorizontal a.MenuBarItemSubmenuHover
+{
+	background-image:url(SpryAssets/SpryMenuBarDownHover.gif);
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+	height: 20px;
+	
+
+}
+/* Menu items that are open with submenus have the class designation MenuBarItemSubmenuHover and are set to use a "hover" background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarHorizontal ul a.MenuBarItemSubmenuHover
+{
+	background-image: url(SpryAssets/SpryMenuBarRightHover.gif);
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+	filter:alpha(opacity=50);
+	opacity: 0.5;
+	-moz-opacity:0.5;
+}
+
+/*******************************************************************************
+
+ BROWSER HACKS: the hacks below should not be changed unless you are an expert
+
+ *******************************************************************************/
+
+/* HACK FOR IE: to make sure the sub menus show above form controls, we underlay each submenu with an iframe */
+ul.MenuBarHorizontal iframe
+{
+	position: absolute;
+	z-index: 1010;
+	filter:alpha(opacity:0.1);
+}
+/* HACK FOR IE: to stabilize appearance of menu items; the slash in float is to keep IE 5.0 from parsing */
+@media screen, projection
+{
+	ul.MenuBarHorizontal li.MenuBarItemIE
+	{
+		display: inline;
+		f\loat: left;
+		background: #FFF;
+	}
+}
+
+.like-h1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 17px !important;
+    font-weight: bold;
+    color: #99CC00;
+}

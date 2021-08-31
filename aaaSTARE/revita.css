@@ -1,0 +1,144 @@
+@charset "utf-8";
+body  {
+	font-family: Verdana, Geneva, sans-serif;
+	background: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #766503;
+	background-image: url(images/bgr189px.jpg);
+	background-repeat: repeat-x;
+	font-size: 11px;
+}
+a:link, a:visited {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: normal;
+	color: #060;
+	text-decoration: none;
+}
+a:hover {
+	font-family: Verdana, Geneva, sans-serif;
+	color: #9C0;
+	text-decoration: none;
+}
+
+.revita #kontener{ 
+	width: 840px;
+	background: #FFFFFF;
+	margin: 0 auto;
+	text-align: left;
+	color: #766503;
+	font-size: 11px;
+	font-family: Verdana, Geneva, sans-serif;
+	
+} 
+.revita #naglowek {
+	background: #FFFFFF;
+	padding: 10px 0 0 0;
+} 
+
+.revita #menupion {
+	float: left; 
+	width: 210px; 
+	background: #FFFFFF;
+	padding: 0;
+	margin-top: 10px;
+}
+
+.revita #main {
+	margin: 0 0 0 220px;
+	padding: 0 0 30px 0;
+	width: 600px;
+	margin-top: 10px;
+	text-align: justify;
+	color: #766503;
+	font-size: 11px;
+	font-family: Verdana, Geneva, sans-serif;
+} 
+.revita h1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #99CC00;
+}
+.revita h2 {
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.clearfloat { 
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+.revita #footer {
+	padding: 0px; 
+	background:#FFFFFF;
+	border-top: 1px solid;
+	border-top-color: #99CC00;
+	text-align: center;
+	font-size:9px;
+	font-family: Verdana, Geneva, sans-serif;
+} 
+
+
+.dziel {
+	padding-left:2px; 
+	padding-right:2px
+}
+.zdjecietxt {
+	border: 1px solid #99CC00;
+	padding: 3px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+	margin-top: 0px;
+	margin-left: 0px;
+	float: left;
+
+}
+.zdjecie {
+	background-color: #FFFFFF;
+	padding: 4px;
+	border: 1px solid #CCC;
+}
+.zdjecie:hover {
+	background-color: #FFFFFF;
+	padding: 4px;
+	border-color: #99CC00;
+	border: 1px solid #99CC00;
+	border-style: solid;
+}
+
+
+
+
+.textdolewej             {
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 35px;
+}
+.textindent {
+	text-indent: 20px;
+}
+
+.tab {
+	border-bottom: 1px solid #99CC00;
+}
+.stopka {
+	font-size: 9px;
+	color: #99CC66;
+	padding-top: 10px;
+	text-align:right
+}
+.tabz {
+	border: 1px solid #99CC00;
+
+}
+.font13cziel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #090;
+}
