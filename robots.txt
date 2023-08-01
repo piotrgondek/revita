@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /0aaSTARE/
-Sitemap: https://www.revita-dukla.pl/sitemap.xml 
