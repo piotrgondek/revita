@@ -1,4 +1,4 @@
-import { ThemeOptions, createTheme } from '@mui/material/styles';
+import { ThemeOptions, createTheme } from '@mui/material/styles'
 
 const themeOptions: ThemeOptions = {
   palette: {
@@ -16,9 +16,9 @@ const themeOptions: ThemeOptions = {
   shape: {
     borderRadius: 20,
   },
-};
+}
 
 // A custom theme for this app
-const theme = createTheme(themeOptions);
+const theme = createTheme(themeOptions)
 
-export default theme;
+export default theme
