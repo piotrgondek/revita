@@ -9,18 +9,19 @@ import {
   CardContent,
   CardMedia,
   Container,
+  Divider,
   List,
   ListItem,
   ListItemText,
   Stack,
   Toolbar,
   Typography,
-  useTheme,
 } from "@mui/material";
 import revitaDukla from "../public/revita-dukla.jpg";
 import rehabilitacjaDzieci from "../public/rehabilitacja-dzieci.jpg";
 import rehabilitacjaDoroslych from "../public/rehabilitacja-doroslych.jpg";
 import rehabilitacjaDomowa from "../public/rehabilitacja-domowa.jpg";
+import { FormatListNumbered } from "@mui/icons-material";
 
 const App: React.FC = function () {
   return (
@@ -32,8 +33,8 @@ const App: React.FC = function () {
           <Button color="inherit">Domowa rehabilitacja dorosłych</Button>
         </Toolbar>
       </AppBar>
-      <Toolbar sx={{ mb: 2 }} />
-      <Container maxWidth="lg">
+      <Toolbar />
+      <Container maxWidth="md" sx={{ my: 2 }}>
         <Stack gap={2}>
           <Card elevation={2}>
             <CardMedia
@@ -73,7 +74,7 @@ const App: React.FC = function () {
             <CardContent>
               <Typography variant="h4">Rehabilitacja Dzieci</Typography>
               <Typography>
-                Specjalizujemy się także w rehabilitacji dzieci. Nasi terapeuci
+                Specjalizujemy się w rehabilitacji dzieci. Nasi terapeuci
                 ukończyli liczne kursy i szkolenia, dzięki którym są
                 wykwalifikowani w pracy z najmłodszymi pacjentami. Stosujemy
                 uznane i skuteczne metody rehabilitacji, takie jak:
@@ -199,20 +200,22 @@ const App: React.FC = function () {
               </Typography>
             </CardContent>
           </Card>
-          <Typography>
-            Zapraszamy do Niepublicznego Zakładu Opieki Zdrowotnej "Revita
-            Dukla", gdzie nasi specjaliści są gotowi zapewnić Państwu najwyższej
-            jakości opiekę rehabilitacyjną, która pozwoli na osiągnięcie
-            optymalnego stanu zdrowia i jakości życia.
-          </Typography>
         </Stack>
       </Container>
       <Toolbar
         sx={(theme) => ({
           backgroundColor: theme.palette.primary.main,
+          justifyContent: "center",
         })}
       >
-        chuj
+        <Stack
+          direction="row"
+          divider={<Divider orientation="vertical" flexItem />}
+        >
+          <Button color="secondary" startIcon={<FormatListNumbered />}>
+            RODO
+          </Button>
+        </Stack>
       </Toolbar>
     </>
   );
