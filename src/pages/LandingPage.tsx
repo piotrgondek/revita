@@ -1,7 +1,7 @@
-import revitaDukla from "../../public/revita-dukla.jpg";
-import rehabilitacjaDzieci from "../../public/rehabilitacja-dzieci.jpg";
-import rehabilitacjaDoroslych from "../../public/rehabilitacja-doroslych.jpg";
-import rehabilitacjaDomowa from "../../public/rehabilitacja-domowa.jpg";
+import revitaDukla from "../assets/revita-dukla.jpg";
+import rehabilitacjaDzieci from "../assets/rehabilitacja-dzieci.jpg";
+import rehabilitacjaDoroslych from "../assets/rehabilitacja-doroslych.jpg";
+import rehabilitacjaDomowa from "../assets/rehabilitacja-domowa.jpg";
 import {
   Stack,
   Card,
