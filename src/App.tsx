@@ -14,8 +14,16 @@ const App: React.FC = function () {
           <Button color="inherit" component={Link} to="/rehabilitacja-dzieci">
             Rehabilitacja dzieci
           </Button>
-          <Button color="inherit">Rehabilitacja dorosłych</Button>
-          <Button color="inherit">Domowa rehabilitacja dorosłych</Button>
+          <Button
+            color="inherit"
+            component={Link}
+            to="/rehabilitacja-doroslych"
+          >
+            Rehabilitacja dorosłych
+          </Button>
+          <Button color="inherit" component={Link} to="/rehabilitacja-domowa">
+            Rehabilitacja domowa
+          </Button>
         </Toolbar>
       </AppBar>
       <Toolbar />
