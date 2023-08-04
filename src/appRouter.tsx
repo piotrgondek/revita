@@ -4,6 +4,7 @@ import LandingPage from "./pages/LandingPage";
 import RehabilitacjaDzieci from "./pages/RehabilitacjaDzieci";
 import RehabilitacjaDoroslych from "./pages/RehabilitacjaDoroslych";
 import RehabilitacjaDomowa from "./pages/RehabilitacjaDomowa";
+import Kontakt from "./pages/Kontakt";
 
 export default createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export default createBrowserRouter([
       {
         path: "rehabilitacja-domowa",
         element: <RehabilitacjaDomowa />,
+      },
+      {
+        path: "kontakt",
+        element: <Kontakt />,
       },
     ],
   },

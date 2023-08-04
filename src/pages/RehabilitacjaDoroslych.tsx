@@ -357,7 +357,7 @@ const RehabilitacjaDoroslych: React.FC = function () {
         </Box>
       </Container>
       <Container maxWidth="md">
-        <Stack spacing={2} sx={{ my: 2 }}>
+        <Stack spacing={2} sx={{ mt: 2, mb: 4 }}>
           <Card>
             <CardMedia
               component="img"
