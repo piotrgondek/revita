@@ -12,7 +12,11 @@ import {
   ListItem,
   ListItemText,
   Container,
+  CardHeader,
+  IconButton,
 } from "@mui/material";
+import { Link as LinkIcon } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const LandingPage: React.FC = function () {
   return (
@@ -25,10 +29,14 @@ const LandingPage: React.FC = function () {
             image={revitaDukla}
             alt="Revita Dukla"
           />
+          <CardHeader
+            title={
+              <Typography variant="h4">
+                Niepubliczny Zakład Opieki Zdrowotnej Revita Dukla
+              </Typography>
+            }
+          />
           <CardContent>
-            <Typography variant="h4">
-              Niepubliczny Zakład Opieki Zdrowotnej Revita Dukla
-            </Typography>
             <Typography>
               N.Z.O.Z. Revita Dukla to renomowany ośrodek specjalizujący się w
               rehabilitacji. Nasza oferta zabiegów, terapii i masaży jest
@@ -53,44 +61,51 @@ const LandingPage: React.FC = function () {
             image={rehabilitacjaDzieci}
             alt="Rehabilitacja Dzieci"
           />
+          <CardHeader
+            action={
+              <IconButton component={Link} to="/rehabilitacja-dzieci">
+                <LinkIcon />
+              </IconButton>
+            }
+            title={<Typography variant="h4">Rehabilitacja Dzieci</Typography>}
+          />
           <CardContent>
-            <Typography variant="h4">Rehabilitacja Dzieci</Typography>
             <Typography>
               Specjalizujemy się w rehabilitacji dzieci. Nasi terapeuci
               ukończyli liczne kursy i szkolenia, dzięki którym są
               wykwalifikowani w pracy z najmłodszymi pacjentami. Stosujemy
               uznane i skuteczne metody rehabilitacji, takie jak:
             </Typography>
-            <List>
+            <List dense>
               <ListItem>
-                <ListItemText>
-                  Metoda Vojty - Innowacyjna terapia stymulująca rozwój ruchowy
-                  u dzieci.
-                </ListItemText>
+                <ListItemText
+                  primary="Metoda Vojty"
+                  secondary="Innowacyjna terapia stymulująca rozwój ruchowy u dzieci."
+                />
               </ListItem>
               <ListItem>
-                <ListItemText>
-                  Metoda NDT-Bobath - Skoncentrowana na korygowaniu zaburzeń
-                  neuromotorycznych u dzieci.
-                </ListItemText>
+                <ListItemText
+                  primary="Metoda NDT-Bobath"
+                  secondary="Skoncentrowana na korygowaniu zaburzeń neuromotorycznych u dzieci."
+                />
               </ListItem>
               <ListItem>
-                <ListItemText>
-                  Metoda PNF - Wzmacniająca mięśnie i poprawiająca koordynację
-                  ruchową.
-                </ListItemText>
+                <ListItemText
+                  primary="Metoda PNF"
+                  secondary="Wzmacniająca mięśnie i poprawiająca koordynację ruchową."
+                />
               </ListItem>
               <ListItem>
-                <ListItemText>
-                  Terapia mięśniowo-powięziowa - Łagodząca bóle i naprężenia
-                  mięśniowe.
-                </ListItemText>
+                <ListItemText
+                  primary="Terapia mięśniowo-powięziowa"
+                  secondary="Łagodząca bóle i naprężenia mięśniowe."
+                />
               </ListItem>
               <ListItem>
-                <ListItemText>
-                  Terapia manualna - Terapeutyczne manipulacje wspomagające
-                  rozwój dziecka.
-                </ListItemText>
+                <ListItemText
+                  primary="Terapia manualna"
+                  secondary="Terapeutyczne manipulacje wspomagające rozwój dziecka."
+                />
               </ListItem>
             </List>
             <Typography>
@@ -108,8 +123,17 @@ const LandingPage: React.FC = function () {
             image={rehabilitacjaDoroslych}
             alt="Rehabilitacja Dorosłych"
           />
+          <CardHeader
+            action={
+              <IconButton component={Link} to="/rehabilitacja-doroslych">
+                <LinkIcon />
+              </IconButton>
+            }
+            title={
+              <Typography variant="h4">Rehabilitacja Dorosłych</Typography>
+            }
+          />
           <CardContent>
-            <Typography variant="h4">Rehabilitacja Dorosłych</Typography>
             <Typography>
               Niezależnie od aktywności i stylu życia, wszyscy jesteśmy narażeni
               na urazy kręgosłupa, uszkodzenia narządu ruchu czy długotrwałe
@@ -117,44 +141,42 @@ const LandingPage: React.FC = function () {
               oferuje kompleksową i skuteczną rehabilitację dorosłych,
               korzystając z uznanych metod terapeutycznych, w tym:
             </Typography>
-            <List>
+            <List dense>
               <ListItem>
-                <ListItemText>
-                  Terapia Mulligana - Innowacyjna metoda terapeutyczna, która
-                  skutecznie łagodzi bóle i poprawia funkcje stawów i
-                  kręgosłupa.
-                </ListItemText>
+                <ListItemText
+                  primary="Terapia Mulligana"
+                  secondary="Innowacyjna metoda terapeutyczna, która skutecznie łagodzi bóle i poprawia funkcje stawów i kręgosłupa."
+                />
               </ListItem>
               <ListItem>
-                <ListItemText>
-                  Terapia manualna - Specjalistyczne manipulacje ręczne, które
-                  redukują napięcia mięśniowe i poprawiają zakres ruchu.
-                </ListItemText>
+                <ListItemText
+                  primary="Terapia manualna"
+                  secondary="Specjalistyczne manipulacje ręczne, które redukują napięcia mięśniowe i poprawiają zakres ruchu."
+                />
               </ListItem>
               <ListItem>
-                <ListItemText>
-                  Kinesiology Taping - Technika tapingu, która wspomaga pracę
-                  mięśni, zmniejsza ból i wspiera gojenie się tkanek.
-                </ListItemText>
+                <ListItemText
+                  primary="Kinesiology Taping"
+                  secondary="Technika tapingu, która wspomaga pracę mięśni, zmniejsza ból i wspiera gojenie się tkanek."
+                />
               </ListItem>
               <ListItem>
-                <ListItemText>
-                  Fizykoterapia - Wykorzystujemy zaawansowane technologie
-                  fizykalne, takie jak laseroterapia, ultradźwięki czy
-                  elektrostymulacja, aby przyspieszyć proces rehabilitacji.
-                </ListItemText>
+                <ListItemText
+                  primary="Fizykoterapia "
+                  secondary="Wykorzystujemy zaawansowane technologie fizykalne, takie jak laseroterapia, ultradźwięki czy elektrostymulacja, aby przyspieszyć proces rehabilitacji."
+                />
               </ListItem>
               <ListItem>
-                <ListItemText>
-                  Ćwiczenia czynne - Indywidualnie dostosowane ćwiczenia
-                  wzmacniające i rehabilitacyjne.
-                </ListItemText>
+                <ListItemText
+                  primary="Ćwiczenia czynne"
+                  secondary="Indywidualnie dostosowane ćwiczenia wzmacniające i rehabilitacyjne."
+                />
               </ListItem>
               <ListItem>
-                <ListItemText>
-                  Masaże - Terapeutyczne masaże, które redukują napięcie
-                  mięśniowe i przynoszą ulgę w dolegliwościach.
-                </ListItemText>
+                <ListItemText
+                  primary="Masaże "
+                  secondary="Terapeutyczne masaże, które redukują napięcie mięśniowe i przynoszą ulgę w dolegliwościach."
+                />
               </ListItem>
             </List>
             <Typography>
@@ -171,8 +193,15 @@ const LandingPage: React.FC = function () {
             image={rehabilitacjaDomowa}
             alt="Rehabilitacja Domowa"
           />
+          <CardHeader
+            action={
+              <IconButton component={Link} to="/rehabilitacja-domowa">
+                <LinkIcon />
+              </IconButton>
+            }
+            title={<Typography variant="h4">Rehabilitacja Domowa</Typography>}
+          />
           <CardContent>
-            <Typography variant="h4">Rehabilitacja Domowa</Typography>
             <Typography>
               W celu zapewnienia wsparcia dla osób mniej mobilnych, oferujemy
               również rehabilitację domową. Nasi specjaliści docierają do
