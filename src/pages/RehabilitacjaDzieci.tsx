@@ -12,9 +12,14 @@ import {
   Typography,
   alpha,
   Grid,
+  CardMedia,
 } from "@mui/material";
 import jpg from "../assets/rehabilitacja-dzieci.jpg";
 import { ListCard } from "../types";
+import dzieci from "../assets/dzieci.jpg";
+import dzieci2 from "../assets/dzieci2.jpg";
+import dzieci3 from "../assets/dzieci3.jpg";
+import dzieci4 from "../assets/dzieci4.jpg";
 
 const listaMetodTerap: Array<Pick<ListItemTextProps, "primary" | "secondary">> =
   [
@@ -360,6 +365,12 @@ const RehabilitacjaDzieci: React.FC = function () {
             <Grid container spacing={2}>
               <Grid item xs={12} md={8}>
                 <Card>
+                  <CardMedia
+                    component="img"
+                    height="200px"
+                    image={dzieci4}
+                    alt="Zabieg"
+                  />
                   <CardHeader title="Lista metod terapeutycznych dla dzieci" />
                   <CardContent>
                     <Typography>
@@ -382,6 +393,12 @@ const RehabilitacjaDzieci: React.FC = function () {
               </Grid>
               <Grid item xs={12} md={4}>
                 <Card>
+                  <CardMedia
+                    component="img"
+                    height="200px"
+                    image={dzieci}
+                    alt="Zabieg"
+                  />
                   <CardHeader title="Wspieramy terapie innymi metodami" />
                   <CardContent>
                     <Typography>
@@ -411,6 +428,12 @@ const RehabilitacjaDzieci: React.FC = function () {
             </Grid>
           </Box>
           <Card>
+            <CardMedia
+              component="img"
+              height="200px"
+              image={dzieci2}
+              alt="Zabieg"
+            />
             <CardHeader
               title="Cennik rehabilitacji dzieci"
               subheader="Posiadamy umowę z NFZ. Poniższy cennik przedstawia ceny usług wykonywanych prywatnie."
@@ -457,6 +480,12 @@ const RehabilitacjaDzieci: React.FC = function () {
             </CardContent>
           </Card>
           <Card>
+            <CardMedia
+              component="img"
+              height="200px"
+              image={dzieci3}
+              alt="Zabieg"
+            />
             <CardHeader
               title="Zespół Specjalistów ds. Rehabilitacji Dzieci"
               subheader="Nasza kadra składa się z wykwalifikowanych specjalistów, których głównym celem jest zapewnienie wszechstronnej opieki rehabilitacyjnej dzieciom. Oto nasi eksperci:"
