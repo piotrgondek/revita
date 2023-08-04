@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import jpg from "../assets//rehabilitacja-doroslych.jpg";
 import { ListCard } from "../types";
-import zabieg from "../assets/zabieg.jpeg";
+import zabieg from "../assets/zabieg.jpg";
 import zabieg2 from "../assets/zabieg2.jpg";
 import specjalista from "../assets/specjalista.jpg";
 
