@@ -14,6 +14,7 @@ import {
   Grid,
 } from "@mui/material";
 import jpg from "../../public/rehabilitacja-dzieci.jpg";
+import { ListCard } from "../types";
 
 const listaMetodTerap: Array<Pick<ListItemTextProps, "primary" | "secondary">> =
   [
@@ -90,11 +91,6 @@ const listaInnychMetod: Array<
       "Splinty - Jedno- lub dwukomorowe nadmuchiwane rękawy stosowane na kończynę dolną bądź górną, mające szerokie zastosowanie u dzieci z różnymi zaburzeniami.",
   },
 ];
-
-type ListCard = {
-  title: string;
-  items: Array<Pick<ListItemTextProps, "primary" | "secondary">>;
-};
 
 const fizykoterapia: ListCard = {
   title: "Fizykoterapia",
@@ -312,44 +308,6 @@ const personel: ListCard[] = [
   },
 ];
 
-type Person = {
-  title: string;
-  name: string;
-  additionalInfo?: string;
-};
-
-const fizjoterapeuci: Person[] = [
-  {
-    title: "mgr",
-    name: "Violetta Bąk",
-    additionalInfo: "specjalista rehabilitacji ruchowej",
-  },
-  {
-    title: "mgr",
-    name: "Agnieszka Jakieła",
-  },
-  {
-    title: "mgr",
-    name: "Justyna Czerkiewicz",
-  },
-  {
-    title: "mgr",
-    name: "Angelina Jurczak",
-  },
-  {
-    title: "mgr",
-    name: "Małgorzata Ochałek",
-  },
-  {
-    title: "mgr",
-    name: "Barbara Fornal",
-  },
-  {
-    title: "mgr",
-    name: "Joanna Rozmus",
-  },
-];
-
 const RehabilitacjaDzieci: React.FC = function () {
   return (
     <>
@@ -372,7 +330,7 @@ const RehabilitacjaDzieci: React.FC = function () {
             color: theme.palette.primary.main,
           })}
           component="span"
-          variant="h3"
+          variant="h4"
         >
           Rehabilitacja dzieci - Wspieramy pełen rozwój i zdrowie najmłodszych
         </Typography>
@@ -397,9 +355,9 @@ const RehabilitacjaDzieci: React.FC = function () {
         </Typography>
       </Container>
       <Container maxWidth="xl">
-        <Stack spacing={2}>
+        <Stack spacing={2} mt={2}>
           <Box>
-            <Grid container spacing={2} mt={2}>
+            <Grid container spacing={2}>
               <Grid item xs={12} md={8}>
                 <Card>
                   <CardHeader title="Lista metod terapeutycznych dla dzieci" />
