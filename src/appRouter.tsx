@@ -3,6 +3,7 @@ import App from "./App";
 import LandingPage from "./pages/LandingPage";
 import RehabilitacjaDzieci from "./pages/RehabilitacjaDzieci";
 import RehabilitacjaDoroslych from "./pages/RehabilitacjaDoroslych";
+import RehabilitacjaDomowa from "./pages/RehabilitacjaDomowa";
 
 export default createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export default createBrowserRouter([
       {
         path: "rehabilitacja-doroslych",
         element: <RehabilitacjaDoroslych />,
+      },
+      {
+        path: "rehabilitacja-domowa",
+        element: <RehabilitacjaDomowa />,
       },
     ],
   },
