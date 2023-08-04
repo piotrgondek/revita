@@ -13,11 +13,11 @@ import {
   Typography,
   alpha,
 } from "@mui/material";
-import jpg from "../../public/rehabilitacja-doroslych.jpg";
+import jpg from "../assets//rehabilitacja-doroslych.jpg";
 import { ListCard } from "../types";
-import zabieg from "../../public/zabieg.jpeg";
-import zabieg2 from "../../public/zabieg2.jpg";
-import specjalista from "../../public/specjalista.jpg";
+import zabieg from "../assets/zabieg.jpeg";
+import zabieg2 from "../assets/zabieg2.jpg";
+import specjalista from "../assets/specjalista.jpg";
 
 const metody: ListCard = {
   title:

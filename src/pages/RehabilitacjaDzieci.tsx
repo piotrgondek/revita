@@ -13,7 +13,7 @@ import {
   alpha,
   Grid,
 } from "@mui/material";
-import jpg from "../../public/rehabilitacja-dzieci.jpg";
+import jpg from "../assets/rehabilitacja-dzieci.jpg";
 import { ListCard } from "../types";
 
 const listaMetodTerap: Array<Pick<ListItemTextProps, "primary" | "secondary">> =
