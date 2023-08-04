@@ -38,7 +38,13 @@ const App: React.FC = function () {
           direction="row"
           divider={<Divider orientation="vertical" flexItem />}
         >
-          <Button color="secondary" startIcon={<FormatListNumbered />}>
+          <Button
+            color="secondary"
+            startIcon={<FormatListNumbered />}
+            component={Link}
+            to="/RODO.pdf"
+            target="_blank"
+          >
             RODO
           </Button>
         </Stack>
