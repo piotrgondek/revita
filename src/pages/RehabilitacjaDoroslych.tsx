@@ -3,6 +3,7 @@ import {
   Card,
   CardContent,
   CardHeader,
+  CardMedia,
   Container,
   Grid,
   List,
@@ -14,6 +15,9 @@ import {
 } from "@mui/material";
 import jpg from "../../public/rehabilitacja-doroslych.jpg";
 import { ListCard } from "../types";
+import zabieg from "../../public/zabieg.jpeg";
+import zabieg2 from "../../public/zabieg2.jpg";
+import specjalista from "../../public/specjalista.jpg";
 
 const metody: ListCard = {
   title:
@@ -80,7 +84,7 @@ const metody: ListCard = {
 };
 
 const cennik: ListCard = {
-  title: "Cennik przedstawia ceny usług wykonywanych prywatnie",
+  title: "Poniższy cennik przedstawia ceny usług wykonywanych prywatnie",
   items: [
     {
       primary: "Laseroterapia",
@@ -212,6 +216,24 @@ const cennik: ListCard = {
   ],
 };
 
+const specjalisci: ListCard = {
+  title: "Zespół Fizjoterapeutów",
+  items: [
+    {
+      primary: "mgr Barbara Konop",
+    },
+    {
+      primary: "mgr Aleksandra Drozd",
+    },
+    {
+      primary: "mgr Marlena Wiernasz",
+    },
+    {
+      primary: "mgr Violetta Bąk",
+    },
+  ],
+};
+
 const RehabilitacjaDoroslych: React.FC = function () {
   return (
     <>
@@ -263,10 +285,16 @@ const RehabilitacjaDoroslych: React.FC = function () {
       </Container>
       <Container maxWidth="xl">
         <Box sx={{ mt: 2 }}>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} alignItems="stretch">
             <Grid item xs={12} lg={6}>
-              <Card>
+              <Card sx={{ height: 1 }}>
                 <CardHeader title={metody.title} />
+                <CardMedia
+                  component="img"
+                  height="200px"
+                  image={zabieg}
+                  alt="Zabieg"
+                />
                 <CardContent>
                   <List dense>
                     {metody.items.map(({ primary, secondary }) => (
@@ -287,13 +315,19 @@ const RehabilitacjaDoroslych: React.FC = function () {
               </Card>
             </Grid>
             <Grid item xs={12} lg={6}>
-              <Card>
+              <Card sx={{ height: 1 }}>
                 <CardHeader title={cennik.title} />
+                <CardMedia
+                  component="img"
+                  height="200px"
+                  image={zabieg2}
+                  alt="Zabieg"
+                />
                 <CardContent>
                   <Stack direction="row" spacing={2}>
                     <List dense sx={{ flex: "0 0 50%" }}>
                       {cennik.items
-                        .slice(0, Math.ceil(cennik.items.length / 2))
+                        .slice(0, Math.ceil(cennik.items.length / 2) + 1)
                         .map(({ primary, secondary }) => (
                           <ListItem key={`${primary}-${secondary}`}>
                             <ListItemText
@@ -305,7 +339,7 @@ const RehabilitacjaDoroslych: React.FC = function () {
                     </List>
                     <List dense sx={{ flex: "0 0 50%" }}>
                       {cennik.items
-                        .slice(Math.ceil(cennik.items.length / 2))
+                        .slice(Math.ceil(cennik.items.length / 2) + 1)
                         .map(({ primary, secondary }) => (
                           <ListItem key={`${primary}-${secondary}`}>
                             <ListItemText
@@ -321,6 +355,45 @@ const RehabilitacjaDoroslych: React.FC = function () {
             </Grid>
           </Grid>
         </Box>
+      </Container>
+      <Container maxWidth="md">
+        <Stack spacing={2} sx={{ my: 2 }}>
+          <Card>
+            <CardHeader title={specjalisci.title} />
+            <CardMedia
+              component="img"
+              height="200px"
+              image={specjalista}
+              alt="Specjalista"
+            />
+            <CardContent>
+              <List dense>
+                {specjalisci.items.map(({ primary, secondary }) => (
+                  <ListItem key={`${primary}-${secondary}`}>
+                    <ListItemText primary={primary} />
+                  </ListItem>
+                ))}
+              </List>
+            </CardContent>
+          </Card>
+          <Typography
+            variant="h6"
+            textAlign="justify"
+            fontStyle="italic"
+            sx={{
+              "&::first-letter": {
+                initialLetter: "2 1",
+              },
+            }}
+          >
+            Nasz zespół wciąż poszerza swoją wiedzę i umiejętności poprzez
+            uczestnictwo w różnorodnych szkoleniach i kursach, aby zapewnić
+            naszym pacjentom najwyższą jakość opieki. Każdy z naszych
+            fizjoterapeutów jest zaangażowany w indywidualne podejście do
+            pacjenta, dostosowując terapię do jego potrzeb i celów. Zaufaj
+            naszym specjalistom i oddaj swoje zdrowie w nasze ręce!
+          </Typography>
+        </Stack>
       </Container>
     </>
   );
