@@ -288,13 +288,13 @@ const RehabilitacjaDoroslych: React.FC = function () {
           <Grid container spacing={2} alignItems="stretch">
             <Grid item xs={12} lg={6}>
               <Card sx={{ height: 1 }}>
-                <CardHeader title={metody.title} />
                 <CardMedia
                   component="img"
                   height="200px"
                   image={zabieg}
                   alt="Zabieg"
                 />
+                <CardHeader title={metody.title} />
                 <CardContent>
                   <List dense>
                     {metody.items.map(({ primary, secondary }) => (
@@ -316,13 +316,13 @@ const RehabilitacjaDoroslych: React.FC = function () {
             </Grid>
             <Grid item xs={12} lg={6}>
               <Card sx={{ height: 1 }}>
-                <CardHeader title={cennik.title} />
                 <CardMedia
                   component="img"
                   height="200px"
                   image={zabieg2}
                   alt="Zabieg"
                 />
+                <CardHeader title={cennik.title} />
                 <CardContent>
                   <Stack direction="row" spacing={2}>
                     <List dense sx={{ flex: "0 0 50%" }}>
@@ -359,13 +359,13 @@ const RehabilitacjaDoroslych: React.FC = function () {
       <Container maxWidth="md">
         <Stack spacing={2} sx={{ my: 2 }}>
           <Card>
-            <CardHeader title={specjalisci.title} />
             <CardMedia
               component="img"
               height="200px"
               image={specjalista}
               alt="Specjalista"
             />
+            <CardHeader title={specjalisci.title} />
             <CardContent>
               <List dense>
                 {specjalisci.items.map(({ primary, secondary }) => (
