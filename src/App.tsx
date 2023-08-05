@@ -11,6 +11,7 @@ import {
   Toolbar,
   useMediaQuery,
   useTheme,
+  Link as MuiLink,
 } from "@mui/material";
 import { Contacts, FormatListNumbered, Home } from "@mui/icons-material";
 import { Link, Outlet } from "react-router-dom";
@@ -75,8 +76,8 @@ const App: React.FC = function () {
           <Button
             color="secondary"
             startIcon={<FormatListNumbered />}
-            component={Link}
-            to="/RODO.pdf"
+            component={MuiLink}
+            href="/RODO.pdf"
             target="_blank"
           >
             RODO

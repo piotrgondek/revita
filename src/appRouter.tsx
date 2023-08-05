@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import App from "./App";
 import LandingPage from "./pages/LandingPage";
 import RehabilitacjaDzieci from "./pages/RehabilitacjaDzieci";
@@ -6,7 +6,7 @@ import RehabilitacjaDoroslych from "./pages/RehabilitacjaDoroslych";
 import RehabilitacjaDomowa from "./pages/RehabilitacjaDomowa";
 import Kontakt from "./pages/Kontakt";
 
-export default createBrowserRouter([
+export default createHashRouter([
   {
     path: "/",
     element: <App />,
