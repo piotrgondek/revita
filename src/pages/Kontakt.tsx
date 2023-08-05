@@ -48,7 +48,7 @@ const Kontakt: React.FC = function () {
           component="span"
           variant="h4"
         >
-          Zapraszamy do Skontaktowania Się z Naszym Zespołem!
+          Zapraszamy do skontaktowania się z naszym zespołem!
         </Typography>
       </Box>
       <Container maxWidth="md">
