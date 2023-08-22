@@ -11,7 +11,6 @@ import {
   ListItemText,
   Stack,
   Typography,
-  alpha,
 } from "@mui/material";
 import jpg from "../assets//rehabilitacja-doroslych.jpg";
 import { ListCard } from "../types";
@@ -328,7 +327,7 @@ const RehabilitacjaDoroslych: React.FC = function () {
         </Box>
       </Container>
       <Container maxWidth="md">
-        <Stack spacing={2} sx={{ mt: 2, mb: 4 }}>
+        <Stack spacing={2} sx={{ mt: 2 }}>
           <Card>
             <CardMedia
               component="img"

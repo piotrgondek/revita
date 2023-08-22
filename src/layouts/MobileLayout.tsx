@@ -32,7 +32,13 @@ const MobileLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Toolbar />
-      <Box>{children}</Box>
+      <Box
+        sx={{
+          pb: 4,
+        }}
+      >
+        {children}
+      </Box>
       <AppBar>
         <Toolbar>
           <IconButton

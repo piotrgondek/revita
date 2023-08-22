@@ -20,8 +20,8 @@ import { Link } from "react-router-dom";
 
 const LandingPage: React.FC = function () {
   return (
-    <Container maxWidth="md" sx={{ my: 2 }}>
-      <Stack gap={2}>
+    <Container maxWidth="md" sx={{ mt: 2 }}>
+      <Stack spacing={2}>
         <Card elevation={2}>
           <CardMedia
             component="img"

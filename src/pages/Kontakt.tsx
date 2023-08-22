@@ -34,7 +34,7 @@ const Kontakt: React.FC = function () {
         text="Zapraszamy do skontaktowania się z naszym zespołem!"
       />
       <Container maxWidth="md">
-        <Stack gap={2} sx={{ mt: 2, mb: 4 }}>
+        <Stack spacing={2} sx={{ mt: 2 }}>
           <ProminentText>
             W trudnych chwilach warto mieć wsparcie doświadczonych
             profesjonalistów. Nasz empatyczny zespół specjalistów zdrowia jest
