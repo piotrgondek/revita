@@ -106,7 +106,9 @@ const DrawerContent: React.FC = () => {
         variant="body2"
         sx={(theme) => ({
           backgroundColor: theme.palette.primary.main,
-          p: 1,
+          py: 1,
+          color: theme.palette.getContrastText(theme.palette.primary.main),
+          textAlign: "center",
         })}
       >
         @ {new Date().getFullYear()} N.Z.O.Z. Revita Dukla

@@ -362,9 +362,9 @@ const RehabilitacjaDzieci: React.FC = function () {
       <Container maxWidth="xl">
         <Stack spacing={2} mt={2}>
           <Box>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} alignItems="stretch">
               <Grid item xs={12} md={8}>
-                <Card>
+                <Card sx={{ height: 1 }}>
                   <CardMedia
                     component="img"
                     height="200px"
@@ -392,7 +392,7 @@ const RehabilitacjaDzieci: React.FC = function () {
                 </Card>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Card>
+                <Card sx={{ height: 1 }}>
                   <CardMedia
                     component="img"
                     height="200px"
