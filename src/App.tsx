@@ -15,10 +15,19 @@ import {
 } from "@mui/material";
 import { Contacts, FormatListNumbered, Home } from "@mui/icons-material";
 import { Link, Outlet } from "react-router-dom";
+import MobileLayout from "./layouts/MobileLayout";
 
 const App: React.FC = function () {
   const theme = useTheme();
   const isSm = useMediaQuery(theme.breakpoints.down("sm"));
+
+  if (isSm) {
+    return (
+      <MobileLayout>
+        <Outlet />
+      </MobileLayout>
+    );
+  }
 
   return (
     <>
