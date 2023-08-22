@@ -17,6 +17,7 @@ import { ListCard } from "../types";
 import zabieg from "../assets/zabieg3.jpg";
 import zabieg2 from "../assets/zabieg4.jpg";
 import HeroImage from "../components/HeroImage";
+import ProminentText from "../components/ProminentText";
 
 const cennik: ListCard = {
   title: "Cennik Domowej Rehabilitacji",
@@ -50,23 +51,13 @@ const RehabilitacjaDomowa: React.FC = function () {
         text="Rehabilitacja Domowa - Ćwiczenia czynne i terapie w zaciszu Twojego domu"
       />
       <Container maxWidth="md">
-        <Typography
-          variant="h6"
-          textAlign="justify"
-          fontStyle="italic"
-          mt={2}
-          sx={{
-            "&::first-letter": {
-              initialLetter: "2 1",
-            },
-          }}
-        >
+        <ProminentText>
           Zdajemy sobie sprawę, że niektórzy z naszych pacjentów z powodu złego
           stanu zdrowia nie mogą przybyć do naszego ośrodka na terapię Vojty,
           terapię dla dorosłych czy inne zajęcia rehabilitacyjne. Dlatego, aby
           sprostać Państwa potrzebom, nasz personel oferuje ćwiczenia czynne
           oraz masaże w domu.
-        </Typography>
+        </ProminentText>
       </Container>
       <Container maxWidth="xl">
         <Box sx={{ mt: 2 }}>
@@ -153,23 +144,13 @@ const RehabilitacjaDomowa: React.FC = function () {
         </Box>
       </Container>
       <Container maxWidth="md">
-        <Typography
-          variant="h6"
-          textAlign="justify"
-          fontStyle="italic"
-          my={2}
-          sx={{
-            "&::first-letter": {
-              initialLetter: "2 1",
-            },
-          }}
-        >
+        <ProminentText>
           Jesteśmy gotowi przyjść do Państwa domu, aby dostosować terapię
           indywidualnie do Państwa potrzeb i zapewnić pełną opiekę
           rehabilitacyjną w przyjemnej i komfortowej atmosferze. Zapraszamy do
           skorzystania z naszych usług i odzyskania pełni zdrowia w zaciszu
           własnego domu.
-        </Typography>
+        </ProminentText>
       </Container>
     </>
   );

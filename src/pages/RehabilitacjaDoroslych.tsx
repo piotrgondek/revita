@@ -19,6 +19,7 @@ import zabieg from "../assets/zabieg.jpg";
 import zabieg2 from "../assets/zabieg2.jpg";
 import specjalista from "../assets/specjalista.jpg";
 import HeroImage from "../components/HeroImage";
+import ProminentText from "../components/ProminentText";
 
 const metody: ListCard = {
   title:
@@ -243,17 +244,7 @@ const RehabilitacjaDoroslych: React.FC = function () {
         text="Rehabilitacja dla dorosłych - Odkryj pełen zakres skutecznych metod terapeutycznych"
       />
       <Container maxWidth="md">
-        <Typography
-          variant="h6"
-          textAlign="justify"
-          fontStyle="italic"
-          mt={2}
-          sx={{
-            "&::first-letter": {
-              initialLetter: "2 1",
-            },
-          }}
-        >
+        <ProminentText>
           W ośrodku rehabilitacyjnym &quot;Revita&quot; oferujemy pacjentom
           szeroki wybór zabiegów z zakresu fizykoterapii, takich jak terapia
           ultradźwiękami. Ponadto, stosujemy różnorodne formy fizjoterapii,
@@ -261,7 +252,7 @@ const RehabilitacjaDoroslych: React.FC = function () {
           takich jak terapia McKenzie, terapia Mulligana czy ćwiczenia czynne.
           Nasi wykwalifikowani fizjoterapeuci pracują z pacjentami, aby zapewnić
           im kompleksową opiekę i efektywne rezultaty.
-        </Typography>
+        </ProminentText>
       </Container>
       <Container maxWidth="xl">
         <Box sx={{ mt: 2 }}>
@@ -356,23 +347,14 @@ const RehabilitacjaDoroslych: React.FC = function () {
               </List>
             </CardContent>
           </Card>
-          <Typography
-            variant="h6"
-            textAlign="justify"
-            fontStyle="italic"
-            sx={{
-              "&::first-letter": {
-                initialLetter: "2 1",
-              },
-            }}
-          >
+          <ProminentText>
             Nasz zespół wciąż poszerza swoją wiedzę i umiejętności poprzez
             uczestnictwo w różnorodnych szkoleniach i kursach, aby zapewnić
             naszym pacjentom najwyższą jakość opieki. Każdy z naszych
             fizjoterapeutów jest zaangażowany w indywidualne podejście do
             pacjenta, dostosowując terapię do jego potrzeb i celów. Zaufaj
             naszym specjalistom i oddaj swoje zdrowie w nasze ręce!
-          </Typography>
+          </ProminentText>
         </Stack>
       </Container>
     </>

@@ -24,6 +24,7 @@ import cergowa from "../assets/cergowa.jpg";
 import parkowa from "../assets/parkowa.jpg";
 import { Link } from "react-router-dom";
 import HeroImage from "../components/HeroImage";
+import ProminentText from "../components/ProminentText";
 
 const Kontakt: React.FC = function () {
   return (
@@ -34,22 +35,13 @@ const Kontakt: React.FC = function () {
       />
       <Container maxWidth="md">
         <Stack gap={2} sx={{ mt: 2, mb: 4 }}>
-          <Typography
-            variant="h6"
-            textAlign="justify"
-            fontStyle="italic"
-            sx={{
-              "&::first-letter": {
-                initialLetter: "2 1",
-              },
-            }}
-          >
+          <ProminentText>
             W trudnych chwilach warto mieć wsparcie doświadczonych
             profesjonalistów. Nasz empatyczny zespół specjalistów zdrowia jest
             tutaj, aby Ci pomóc. Jeśli Ty lub Twoje dziecko borykacie się z
             ciężką chorobą, nie jesteście sami. Skontaktuj się z nami, aby
             umówić wizytę i rozpocząć drogę do powrotu do zdrowia.
-          </Typography>
+          </ProminentText>
           <Card>
             <CardMedia
               component="img"

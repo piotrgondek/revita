@@ -21,6 +21,7 @@ import dzieci2 from "../assets/dzieci2.jpg";
 import dzieci3 from "../assets/dzieci3.jpg";
 import dzieci4 from "../assets/dzieci4.jpg";
 import HeroImage from "../components/HeroImage";
+import ProminentText from "../components/ProminentText";
 
 const listaMetodTerap: Array<Pick<ListItemTextProps, "primary" | "secondary">> =
   [
@@ -322,23 +323,13 @@ const RehabilitacjaDzieci: React.FC = function () {
         text="Rehabilitacja dzieci - Wspieramy pełen rozwój i zdrowie najmłodszych"
       />
       <Container maxWidth="md">
-        <Typography
-          variant="h6"
-          textAlign="justify"
-          fontStyle="italic"
-          mt={2}
-          sx={{
-            "&::first-letter": {
-              initialLetter: "2 1",
-            },
-          }}
-        >
+        <ProminentText>
           Celem rehabilitacji dzieci jest zapewnienie im optymalnych warunków do
           pełnego rozwoju oraz przywrócenie sprawności w przypadku ograniczeń.
           Ośrodek rehabilitacyjny „Revita” oferuje szeroki zakres terapii
           dostosowanych specjalnie do potrzeb naszych podopiecznych w różnym
           wieku.
-        </Typography>
+        </ProminentText>
       </Container>
       <Container maxWidth="xl">
         <Stack spacing={2} mt={2}>
@@ -511,24 +502,14 @@ const RehabilitacjaDzieci: React.FC = function () {
         </Stack>
       </Container>
       <Container maxWidth="md">
-        <Typography
-          variant="h6"
-          textAlign="justify"
-          fontStyle="italic"
-          my={2}
-          sx={{
-            "&::first-letter": {
-              initialLetter: "2 1",
-            },
-          }}
-        >
+        <ProminentText>
           Zapraszamy do Niepublicznego Zakładu Opieki Zdrowotnej
           &quot;Revita&quot;, gdzie nasza zaangażowana kadra specjalistów z
           pasją i profesjonalizmem pracuje nad kompleksowym wsparciem rozwoju
           zdrowia dzieci. Naszym priorytetem jest indywidualne podejście do
           każdego podopiecznego, dzięki czemu osiągamy najlepsze rezultaty
           terapeutyczne.
-        </Typography>
+        </ProminentText>
       </Container>
     </>
   );
