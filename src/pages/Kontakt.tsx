@@ -23,34 +23,15 @@ import {
 import cergowa from "../assets/cergowa.jpg";
 import parkowa from "../assets/parkowa.jpg";
 import { Link } from "react-router-dom";
+import HeroImage from "../components/HeroImage";
 
 const Kontakt: React.FC = function () {
   return (
     <>
-      <Box
-        sx={{
-          height: "45vh",
-          backgroundImage: `url(${jpg})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          position: "relative",
-        }}
-      >
-        <Typography
-          sx={(theme) => ({
-            backgroundColor: alpha(theme.palette.secondary.main, 0.6),
-            p: 2,
-            display: "flex",
-            position: "absolute",
-            bottom: 0,
-            color: theme.palette.primary.main,
-          })}
-          component="span"
-          variant="h4"
-        >
-          Zapraszamy do skontaktowania się z naszym zespołem!
-        </Typography>
-      </Box>
+      <HeroImage
+        img={jpg}
+        text="Zapraszamy do skontaktowania się z naszym zespołem!"
+      />
       <Container maxWidth="md">
         <Stack gap={2} sx={{ mt: 2, mb: 4 }}>
           <Typography

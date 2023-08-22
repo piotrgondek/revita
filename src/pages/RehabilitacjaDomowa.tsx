@@ -11,12 +11,12 @@ import {
   ListItemText,
   Stack,
   Typography,
-  alpha,
 } from "@mui/material";
 import jpg from "../assets/rehabilitacja-domowa.jpg";
 import { ListCard } from "../types";
 import zabieg from "../assets/zabieg3.jpg";
 import zabieg2 from "../assets/zabieg4.jpg";
+import HeroImage from "../components/HeroImage";
 
 const cennik: ListCard = {
   title: "Cennik Domowej Rehabilitacji",
@@ -45,31 +45,10 @@ const cennik: ListCard = {
 const RehabilitacjaDomowa: React.FC = function () {
   return (
     <>
-      <Box
-        sx={{
-          height: "45vh",
-          backgroundImage: `url(${jpg})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          position: "relative",
-        }}
-      >
-        <Typography
-          sx={(theme) => ({
-            backgroundColor: alpha(theme.palette.secondary.main, 0.6),
-            p: 2,
-            display: "flex",
-            position: "absolute",
-            bottom: 0,
-            color: theme.palette.primary.main,
-          })}
-          component="span"
-          variant="h4"
-        >
-          Rehabilitacja Domowa - Ćwiczenia czynne i terapie w zaciszu Twojego
-          domu
-        </Typography>
-      </Box>
+      <HeroImage
+        img={jpg}
+        text="Rehabilitacja Domowa - Ćwiczenia czynne i terapie w zaciszu Twojego domu"
+      />
       <Container maxWidth="md">
         <Typography
           variant="h6"

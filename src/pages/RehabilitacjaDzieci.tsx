@@ -20,6 +20,7 @@ import dzieci from "../assets/dzieci.jpg";
 import dzieci2 from "../assets/dzieci2.jpg";
 import dzieci3 from "../assets/dzieci3.jpg";
 import dzieci4 from "../assets/dzieci4.jpg";
+import HeroImage from "../components/HeroImage";
 
 const listaMetodTerap: Array<Pick<ListItemTextProps, "primary" | "secondary">> =
   [
@@ -316,30 +317,10 @@ const personel: ListCard[] = [
 const RehabilitacjaDzieci: React.FC = function () {
   return (
     <>
-      <Box
-        sx={{
-          height: "45vh",
-          backgroundImage: `url(${jpg})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          position: "relative",
-        }}
-      >
-        <Typography
-          sx={(theme) => ({
-            backgroundColor: alpha(theme.palette.secondary.main, 0.6),
-            p: 2,
-            display: "flex",
-            position: "absolute",
-            bottom: 0,
-            color: theme.palette.primary.main,
-          })}
-          component="span"
-          variant="h4"
-        >
-          Rehabilitacja dzieci - Wspieramy pełen rozwój i zdrowie najmłodszych
-        </Typography>
-      </Box>
+      <HeroImage
+        img={jpg}
+        text="Rehabilitacja dzieci - Wspieramy pełen rozwój i zdrowie najmłodszych"
+      />
       <Container maxWidth="md">
         <Typography
           variant="h6"

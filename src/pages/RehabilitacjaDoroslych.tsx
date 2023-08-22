@@ -18,6 +18,7 @@ import { ListCard } from "../types";
 import zabieg from "../assets/zabieg.jpg";
 import zabieg2 from "../assets/zabieg2.jpg";
 import specjalista from "../assets/specjalista.jpg";
+import HeroImage from "../components/HeroImage";
 
 const metody: ListCard = {
   title:
@@ -237,31 +238,10 @@ const specjalisci: ListCard = {
 const RehabilitacjaDoroslych: React.FC = function () {
   return (
     <>
-      <Box
-        sx={{
-          height: "45vh",
-          backgroundImage: `url(${jpg})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          position: "relative",
-        }}
-      >
-        <Typography
-          sx={(theme) => ({
-            backgroundColor: alpha(theme.palette.secondary.main, 0.6),
-            p: 2,
-            display: "flex",
-            position: "absolute",
-            bottom: 0,
-            color: theme.palette.primary.main,
-          })}
-          component="span"
-          variant="h4"
-        >
-          Rehabilitacja dla dorosłych - Odkryj pełen zakres skutecznych metod
-          terapeutycznych
-        </Typography>
-      </Box>
+      <HeroImage
+        img={jpg}
+        text="Rehabilitacja dla dorosłych - Odkryj pełen zakres skutecznych metod terapeutycznych"
+      />
       <Container maxWidth="md">
         <Typography
           variant="h6"
