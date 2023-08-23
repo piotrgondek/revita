@@ -441,14 +441,7 @@ const RehabilitacjaDzieci: React.FC = function () {
                                 <CreditCard />
                               </ListItemIcon>
                               <ListItemText
-                                primary={
-                                  <Typography
-                                    component="span"
-                                    fontWeight="bold"
-                                  >
-                                    {primary}
-                                  </Typography>
-                                }
+                                primary={primary}
                                 secondary={secondary ?? " "}
                               />
                             </ListItem>
@@ -486,14 +479,7 @@ const RehabilitacjaDzieci: React.FC = function () {
                                 <Badge />
                               </ListItemIcon>
                               <ListItemText
-                                primary={
-                                  <Typography
-                                    component="span"
-                                    fontWeight="bold"
-                                  >
-                                    {primary}
-                                  </Typography>
-                                }
+                                primary={primary}
                                 secondary={secondary ?? " "}
                               />
                             </ListItem>
