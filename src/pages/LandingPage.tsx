@@ -187,19 +187,19 @@ const LandingPage: React.FC = function () {
               />
             </CardActionArea>
             <CardContent>
-              <Typography mb={1}>
+              <Typography gutterBottom>
                 Dla osób o ograniczonej mobilności priorytetem jest skuteczna i
                 wygodna opieka. Wychodząc naprzeciw tym potrzebom, oferujemy
                 rehabilitację w zaciszu domu. Specjaliści dojeżdżają do
                 mieszkańców Dukli i okolic, zapewniając terapię na miejscu.
               </Typography>
-              <Typography mb={1}>
+              <Typography gutterBottom>
                 Doświadczeni specjaliści zapewniają kompleksową i profesjonalną
                 opiekę. Terapia jest dostosowana do stanu zdrowia, możliwości i
                 celów rehabilitacyjnych pacjenta, umożliwiając skuteczny proces
                 zdrowienia w komfortowym otoczeniu domowym.
               </Typography>
-              <Typography mb={1}>
+              <Typography>
                 Wszystkie wizyty są wcześniej umawiane telefonicznie,
                 dostosowując się do grafiku i preferencji pacjenta. Dążymy do
                 kompleksowej opieki, skupiającej się na potrzebach naszych
