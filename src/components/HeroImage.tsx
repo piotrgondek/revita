@@ -9,7 +9,7 @@ const HeroImage: React.FC<HeroImageProps> = function ({ img, text }) {
   return (
     <Box
       sx={{
-        height: "45vh",
+        height: "50vh",
         backgroundImage: `url(${img})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
