@@ -10,9 +10,10 @@ import {
   ListItemTextProps,
   Stack,
   Typography,
-  alpha,
   Grid,
   CardMedia,
+  ListSubheader,
+  ListItemIcon,
 } from "@mui/material";
 import jpg from "../assets/rehabilitacja-dzieci.jpg";
 import { ListCard } from "../types";
@@ -22,6 +23,8 @@ import dzieci3 from "../assets/dzieci3.jpg";
 import dzieci4 from "../assets/dzieci4.jpg";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
+import React from "react";
+import { Badge, Done } from "@mui/icons-material";
 
 const listaMetodTerap: Array<Pick<ListItemTextProps, "primary" | "secondary">> =
   [
@@ -94,225 +97,233 @@ const listaInnychMetod: Array<
       "Specjalistyczne rozwiązanie, wspomagające rehabilitację dzieci z mpdz.",
   },
   {
-    primary:
-      "Splinty - Jedno- lub dwukomorowe nadmuchiwane rękawy stosowane na kończynę dolną bądź górną, mające szerokie zastosowanie u dzieci z różnymi zaburzeniami.",
+    primary: "Splinty",
+    secondary:
+      "Jedno- lub dwukomorowe nadmuchiwane rękawy stosowane na kończynę dolną bądź górną, mające szerokie zastosowanie u dzieci z różnymi zaburzeniami.",
   },
 ];
 
-const fizykoterapia: ListCard = {
-  title: "Fizykoterapia",
-  items: [
+const cennik: ListCard[][] = [
+  [
     {
-      primary: "Laseroterapia",
-      secondary: "10 zł",
+      title: "Fizykoterapia",
+      items: [
+        {
+          primary: "Laseroterapia",
+          secondary: "10 zł",
+        },
+        {
+          primary: "Pole magnetyczne",
+          secondary: "10 zł",
+        },
+        {
+          primary: "Galwanizacja",
+          secondary: "10 zł",
+        },
+        {
+          primary: "Ultradźwięki",
+          secondary: "10 zł",
+        },
+        {
+          primary: "Tonoliza",
+          secondary: "10 zł",
+        },
+        {
+          primary: "Światło spolaryzowane",
+          secondary: "7 zł",
+        },
+        {
+          primary: "Lampa SOLUX",
+          secondary: "7 zł",
+        },
+        {
+          primary: "Ciepłolecznictwo",
+          secondary: "7 zł",
+        },
+        {
+          primary: "Vibromasaż",
+          secondary: "7 zł",
+        },
+        {
+          primary: "Bieżnia",
+          secondary: "7 zł",
+        },
+        {
+          primary: "Hydromasaż",
+          secondary: "15 - 20 zł",
+        },
+      ],
     },
     {
-      primary: "Pole magnetyczne",
-      secondary: "10 zł",
-    },
-    {
-      primary: "Galwanizacja",
-      secondary: "10 zł",
-    },
-    {
-      primary: "Ultradźwięki",
-      secondary: "10 zł",
-    },
-    {
-      primary: "Tonoliza",
-      secondary: "10 zł",
-    },
-    {
-      primary: "Światło spolaryzowane",
-      secondary: "7 zł",
-    },
-    {
-      primary: "Lampa SOLUX",
-      secondary: "7 zł",
-    },
-    {
-      primary: "Ciepłolecznictwo",
-      secondary: "7 zł",
-    },
-    {
-      primary: "Vibromasaż",
-      secondary: "7 zł",
-    },
-    {
-      primary: "Bieżnia",
-      secondary: "7 zł",
-    },
-    {
-      primary: "Hydromasaż",
-      secondary: "15 - 20 zł",
+      title: "Neurologopeda/Psycholog",
+      items: [
+        {
+          primary: "Porada neurologopedyczna/psychologiczna",
+          secondary: "100 zł",
+        },
+        {
+          primary: "Wizyta neurologopedyczna/psychologiczna",
+          secondary: "120 zł",
+        },
+      ],
     },
   ],
-};
-
-const cennik: Array<ListCard> = [
-  {
-    title: "Porady lekarskie",
-    items: [
-      {
-        primary: "Pediatra neurolog",
-        secondary: "120 zł",
-      },
-      {
-        primary: "Pediatra balneoklimatolog",
-        secondary: "120 zł",
-      },
-      {
-        primary: "Lekarz rehabilitacji",
-        secondary: "120 zł",
-      },
-      {
-        primary: "Chirurg dziecięcy",
-        secondary: "150 zł",
-      },
-      {
-        primary: "Dietetyk dziecięcy",
-        secondary: "120 zł",
-      },
-      {
-        primary: "Ortopeda dziecięcy",
-        secondary: "120 zł",
-      },
-    ],
-  },
-  {
-    title: "Kinezyterapia",
-    items: [
-      {
-        primary: "Porada fizjoterapeutyczna",
-        secondary: "120 zł",
-      },
-      {
-        primary: "Terapia z fizjoterapeutą",
-        secondary: "cenę ustala fizjoterapeuta w zależności od terapii",
-      },
-      {
-        primary: "Metody terapeutyczne z naszej oferty więcej",
-        secondary: "100 - 200 zł",
-      },
-      {
-        primary: "Terapia zajęciowa/terapia ręki",
-        secondary: "60 - 80 zł",
-      },
-    ],
-  },
-  {
-    title: "Neurologopeda/Psycholog",
-    items: [
-      {
-        primary: "Porada neurologopedyczna/psychologiczna",
-        secondary: "100 zł",
-      },
-      {
-        primary: "Wizyta neurologopedyczna/psychologiczna",
-        secondary: "120 zł",
-      },
-    ],
-  },
-  {
-    title: "Taping",
-    items: [
-      {
-        primary: "Kinesiology taping",
-        secondary: "30 - 60 zł",
-      },
-    ],
-  },
+  [
+    {
+      title: "Porady lekarskie",
+      items: [
+        {
+          primary: "Pediatra neurolog",
+          secondary: "120 zł",
+        },
+        {
+          primary: "Pediatra balneoklimatolog",
+          secondary: "120 zł",
+        },
+        {
+          primary: "Lekarz rehabilitacji",
+          secondary: "120 zł",
+        },
+        {
+          primary: "Chirurg dziecięcy",
+          secondary: "150 zł",
+        },
+        {
+          primary: "Dietetyk dziecięcy",
+          secondary: "120 zł",
+        },
+        {
+          primary: "Ortopeda dziecięcy",
+          secondary: "120 zł",
+        },
+      ],
+    },
+    {
+      title: "Kinezyterapia",
+      items: [
+        {
+          primary: "Porada fizjoterapeutyczna",
+          secondary: "120 zł",
+        },
+        {
+          primary: "Terapia z fizjoterapeutą",
+          secondary: "cenę ustala fizjoterapeuta w zależności od terapii",
+        },
+        {
+          primary: "Metody terapeutyczne z naszej oferty",
+          secondary: "100 - 200 zł",
+        },
+        {
+          primary: "Terapia zajęciowa/terapia ręki",
+          secondary: "60 - 80 zł",
+        },
+      ],
+    },
+    {
+      title: "Taping",
+      items: [
+        {
+          primary: "Kinesiology taping",
+          secondary: "30 - 60 zł",
+        },
+      ],
+    },
+  ],
 ];
 
-const personel: ListCard[] = [
-  {
-    title: "Fizjoterapeuci:",
-    items: [
-      {
-        primary: "mgr Violetta Bąk",
-        secondary: "specjalista rehabilitacji ruchowej",
-      },
-      {
-        primary: "mgr Agnieszka Jakieła",
-      },
-      {
-        primary: "mgr Justyna Czerkiewicz",
-      },
-      {
-        primary: "mgr Angelina Jurczak",
-      },
-      {
-        primary: "mgr Małgorzata Ochałek",
-      },
-      {
-        primary: "mgr Barbara Fornal",
-      },
-      {
-        primary: "mgr Joanna Rozmus",
-      },
-    ],
-  },
-  {
-    title: "Lekarze:",
-    items: [
-      {
-        primary: "dr n. med. Joanna Kazanecka",
-        secondary: "specjalista neurologii dziecięcej i pediatrii",
-      },
-      {
-        primary: "lek. Anna Tuchowska",
-        secondary: "specjalista pediatrii, balneolog",
-      },
-      {
-        primary: "lek. Janusz Zima",
-        secondary: "specjalista rehabilitacji medycznej i medycyny rodzinnej",
-      },
-    ],
-  },
-  {
-    title: "Neurologopedzi:",
-    items: [
-      {
-        primary: "mgr Anna Wajda",
-      },
-      {
-        primary: "mgr Katarzyna Skrobek-Chmurska",
-      },
-      {
-        primary: "mgr Joanna Paluch-Bożek",
-      },
-    ],
-  },
-  {
-    title: "Psycholog:",
-    items: [
-      {
-        primary: "mgr Katarzyna Pulnar",
-      },
-    ],
-  },
-  {
-    title: "Wizyty prywatne:",
-    items: [
-      {
-        primary: "dr n. med. Stanisław Zieliński",
-        secondary:
-          "specjalista chirurgii dziecięcej (rejestracja telefoniczna: 601-087-654)",
-      },
-      {
-        primary: "dr. n. med. Joanna Kazanecka",
-        secondary: "neurolog dziecięcy",
-      },
-      {
-        primary: "lek. Piotr Szczerba",
-        secondary: "ortopeda",
-      },
-      {
-        primary: "dr n. med. Elżbieta Gabrowska",
-        secondary: "dietetyk",
-      },
-    ],
-  },
+const personel: ListCard[][] = [
+  [
+    {
+      title: "Fizjoterapeuci:",
+      items: [
+        {
+          primary: "mgr Violetta Bąk",
+          secondary: "specjalista rehabilitacji ruchowej",
+        },
+        {
+          primary: "mgr Agnieszka Jakieła",
+        },
+        {
+          primary: "mgr Justyna Czerkiewicz",
+        },
+        {
+          primary: "mgr Angelina Jurczak",
+        },
+        {
+          primary: "mgr Małgorzata Ochałek",
+        },
+        {
+          primary: "mgr Barbara Fornal",
+        },
+        {
+          primary: "mgr Joanna Rozmus",
+        },
+      ],
+    },
+    {
+      title: "Lekarze:",
+      items: [
+        {
+          primary: "dr n. med. Joanna Kazanecka",
+          secondary: "specjalista neurologii dziecięcej i pediatrii",
+        },
+        {
+          primary: "lek. Anna Tuchowska",
+          secondary: "specjalista pediatrii, balneolog",
+        },
+        {
+          primary: "lek. Janusz Zima",
+          secondary: "specjalista rehabilitacji medycznej i medycyny rodzinnej",
+        },
+      ],
+    },
+  ],
+  [
+    {
+      title: "Neurologopedzi:",
+      items: [
+        {
+          primary: "mgr Anna Wajda",
+        },
+        {
+          primary: "mgr Katarzyna Skrobek-Chmurska",
+        },
+        {
+          primary: "mgr Joanna Paluch-Bożek",
+        },
+      ],
+    },
+    {
+      title: "Psycholog:",
+      items: [
+        {
+          primary: "mgr Katarzyna Pulnar",
+        },
+      ],
+    },
+    {
+      title: "Wizyty prywatne:",
+      items: [
+        {
+          primary: "dr n. med. Stanisław Zieliński",
+          secondary:
+            "specjalista chirurgii dziecięcej (rejestracja telefoniczna: 601-087-654)",
+        },
+        {
+          primary: "dr. n. med. Joanna Kazanecka",
+          secondary: "neurolog dziecięcy",
+        },
+        {
+          primary: "lek. Piotr Szczerba",
+          secondary: "ortopeda",
+        },
+        {
+          primary: "dr n. med. Elżbieta Gabrowska",
+          secondary: "dietetyk",
+        },
+      ],
+    },
+  ],
 ];
 
 const RehabilitacjaDzieci: React.FC = function () {
@@ -331,11 +342,11 @@ const RehabilitacjaDzieci: React.FC = function () {
           wieku.
         </ProminentText>
       </Container>
-      <Container maxWidth="xl">
-        <Stack spacing={2} mt={2}>
+      <Container maxWidth="lg">
+        <Stack spacing={2}>
           <Box>
             <Grid container spacing={2} alignItems="stretch">
-              <Grid item xs={12} md={8}>
+              <Grid item xs={12} lg={8}>
                 <Card sx={{ height: 1 }}>
                   <CardMedia
                     component="img"
@@ -363,7 +374,7 @@ const RehabilitacjaDzieci: React.FC = function () {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} lg={4}>
                 <Card sx={{ height: 1 }}>
                   <CardMedia
                     component="img"
@@ -408,46 +419,39 @@ const RehabilitacjaDzieci: React.FC = function () {
             />
             <CardHeader
               title="Cennik rehabilitacji dzieci"
-              subheader="Posiadamy umowę z NFZ. Poniższy cennik przedstawia ceny usług wykonywanych prywatnie."
+              subheader="Współpracujemy z NFZ, co pozwala nam na świadczenie usług medycznych w ramach umowy. Poniższy cennik dotyczy oferty prywatnej dla naszych pacjentów."
             />
             <CardContent>
-              <Grid container spacing={2}>
-                <Grid item xs={12} md={4}>
-                  <Card>
-                    <CardHeader title={fizykoterapia.title} />
-                    <List dense>
-                      {fizykoterapia.items.map(({ primary, secondary }) => (
-                        <ListItem key={`${primary}-${secondary}`}>
-                          <ListItemText
-                            primary={primary}
-                            secondary={secondary}
-                          />
-                        </ListItem>
+              <Grid container>
+                {cennik.map((c, i) => (
+                  <Grid key={i} item xs={12} md={6}>
+                    <List disablePadding>
+                      {c.map(({ title, items }) => (
+                        <React.Fragment key={title}>
+                          <ListSubheader>{title}</ListSubheader>
+                          {items.map(({ primary, secondary }) => (
+                            <ListItem key={`${primary}-${secondary}`}>
+                              <ListItemIcon>
+                                <Done />
+                              </ListItemIcon>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    component="span"
+                                    fontWeight="bold"
+                                  >
+                                    {primary}
+                                  </Typography>
+                                }
+                                secondary={secondary ?? " "}
+                              />
+                            </ListItem>
+                          ))}
+                        </React.Fragment>
                       ))}
                     </List>
-                  </Card>
-                </Grid>
-                <Grid item xs={12} md={8}>
-                  <Grid container spacing={2}>
-                    {cennik.map(({ title, items }) => (
-                      <Grid item key={title} xs={12} lg={6}>
-                        <Card>
-                          <CardHeader title={title} />
-                          <List dense>
-                            {items.map(({ primary, secondary }) => (
-                              <ListItem key={`${primary}-${secondary}`}>
-                                <ListItemText
-                                  primary={primary}
-                                  secondary={secondary}
-                                />
-                              </ListItem>
-                            ))}
-                          </List>
-                        </Card>
-                      </Grid>
-                    ))}
                   </Grid>
-                </Grid>
+                ))}
               </Grid>
             </CardContent>
           </Card>
@@ -463,26 +467,37 @@ const RehabilitacjaDzieci: React.FC = function () {
               subheader="Nasza kadra składa się z wykwalifikowanych specjalistów, których głównym celem jest zapewnienie wszechstronnej opieki rehabilitacyjnej dzieciom. Oto nasi eksperci:"
             ></CardHeader>
             <CardContent>
-              <Grid spacing={2} container justifyContent="center">
-                {personel.map(({ title, items }) => (
-                  <Grid item key={title} xs={12} md={6} lg={2}>
-                    <Card>
-                      <CardHeader title={title} />
-                      <List dense>
-                        {items.map(({ primary, secondary }) => (
-                          <ListItem key={`${primary}-${secondary}`}>
-                            <ListItemText
-                              primary={primary}
-                              secondary={secondary}
-                            />
-                          </ListItem>
-                        ))}
-                      </List>
-                    </Card>
+              <Grid container>
+                {personel.map((c, i) => (
+                  <Grid key={i} item xs={12} md={6}>
+                    <List disablePadding>
+                      {c.map(({ title, items }) => (
+                        <React.Fragment key={title}>
+                          <ListSubheader>{title}</ListSubheader>
+                          {items.map(({ primary, secondary }) => (
+                            <ListItem key={`${primary}-${secondary}`}>
+                              <ListItemIcon>
+                                <Badge />
+                              </ListItemIcon>
+                              <ListItemText
+                                primary={
+                                  <Typography
+                                    component="span"
+                                    fontWeight="bold"
+                                  >
+                                    {primary}
+                                  </Typography>
+                                }
+                                secondary={secondary ?? " "}
+                              />
+                            </ListItem>
+                          ))}
+                        </React.Fragment>
+                      ))}
+                    </List>
                   </Grid>
                 ))}
               </Grid>
-
               <Container maxWidth="md" sx={{ mt: 2 }}>
                 <Typography>
                   Dodatkowo, z radością informujemy o możliwości konsultacji z
