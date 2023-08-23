@@ -20,6 +20,7 @@ import {
   ListItemText,
   IconButton,
   Typography,
+  Toolbar,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -102,17 +103,16 @@ const DrawerContent: React.FC = () => {
         </ListItem>
       </List>
       <Box sx={{ flexGrow: 1 }} />
-      <Typography
-        variant="body2"
-        sx={(theme) => ({
-          backgroundColor: theme.palette.primary.main,
-          py: 1,
-          color: theme.palette.getContrastText(theme.palette.primary.main),
-          textAlign: "center",
-        })}
+      <Toolbar
+        sx={{
+          backgroundColor: "primary.main",
+          alignItems: "center",
+        }}
       >
-        @ {new Date().getFullYear()} N.Z.O.Z. Revita Dukla
-      </Typography>
+        <Typography variant="body2">
+          @ {new Date().getFullYear()} N.Z.O.Z. Revita Dukla
+        </Typography>
+      </Toolbar>
     </Stack>
   );
 };
