@@ -21,10 +21,69 @@ import {
   IconButton,
   Typography,
   Toolbar,
+  ListItemProps,
 } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useMatches } from "react-router-dom";
+
+const links: Array<
+  | ({
+      to: string;
+      icon: JSX.Element;
+      text: string;
+      component?: React.ElementType;
+      target?: "_blank";
+    } & Pick<ListItemProps, "secondaryAction">)
+  | "divider"
+> = [
+  {
+    to: "/",
+    icon: <Home />,
+    text: "Strona główna",
+  },
+  {
+    to: "/rehabilitacja-dzieci",
+    icon: <BabyChangingStation />,
+    text: "Rehabilitacja dzieci",
+  },
+  {
+    to: "/rehabilitacja-doroslych",
+    icon: <Wc />,
+    text: "Rehabilitacja dorosłych",
+  },
+  {
+    to: "/rehabilitacja-domowa",
+    icon: <Accessible />,
+    text: "Rehabilitacja domowa",
+  },
+  {
+    to: "/kontakt",
+    icon: <Contacts />,
+    text: "Kontakt",
+  },
+  "divider",
+  {
+    to: "/RODO.pdf",
+    icon: <FormatListNumbered />,
+    text: "RODO",
+    component: MuiLink,
+    target: "_blank",
+    secondaryAction: (
+      <IconButton edge="end">
+        <OpenInNew />
+      </IconButton>
+    ),
+  },
+];
 
 const DrawerContent: React.FC = () => {
+  const matches = useMatches();
+
+  const isSelected = (to: string) =>
+    matches
+      .slice(1)
+      .map((m) => m.pathname)
+      .includes(to);
+
   return (
     <Stack height={1}>
       <Box
@@ -44,63 +103,24 @@ const DrawerContent: React.FC = () => {
         />
       </Box>
       <Divider />
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton component={Link} to="/">
-            <ListItemIcon>
-              <Home />
-            </ListItemIcon>
-            <ListItemText primary="Strona główna" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component={Link} to="/rehabilitacja-dzieci">
-            <ListItemIcon>
-              <BabyChangingStation />
-            </ListItemIcon>
-            <ListItemText primary="Rehabilitacja dzieci" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component={Link} to="/rehabilitacja-doroslych">
-            <ListItemIcon>
-              <Wc />
-            </ListItemIcon>
-            <ListItemText primary="Rehabilitacja dorosłych" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component={Link} to="/rehabilitacja-domowa">
-            <ListItemIcon>
-              <Accessible />
-            </ListItemIcon>
-            <ListItemText primary="Rehabilitacja domowa" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component={Link} to="/kontakt">
-            <ListItemIcon>
-              <Contacts />
-            </ListItemIcon>
-            <ListItemText primary="Kontakt" />
-          </ListItemButton>
-        </ListItem>
-        <Divider />
-        <ListItem
-          disablePadding
-          secondaryAction={
-            <IconButton edge="end">
-              <OpenInNew />
-            </IconButton>
-          }
-        >
-          <ListItemButton component={MuiLink} href="/RODO.pdf" target="_blank">
-            <ListItemIcon>
-              <FormatListNumbered />
-            </ListItemIcon>
-            <ListItemText primary="RODO" />
-          </ListItemButton>
-        </ListItem>
+      <List disablePadding>
+        {links.map((link) => {
+          if (link === "divider") return <Divider key="divider" />;
+          const { to, icon, text, component, target, secondaryAction } = link;
+          return (
+            <ListItem key={to} disablePadding secondaryAction={secondaryAction}>
+              <ListItemButton
+                component={component ?? Link}
+                to={to}
+                selected={isSelected(to)}
+                target={target}
+              >
+                <ListItemIcon>{icon}</ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
       </List>
       <Box sx={{ flexGrow: 1 }} />
       <Toolbar

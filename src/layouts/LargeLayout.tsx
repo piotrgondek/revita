@@ -1,11 +1,13 @@
 import { Toolbar, Box, Drawer } from "@mui/material";
 import DrawerContent from "../components/DrawerContent";
+import { ScrollRestoration } from "react-router-dom";
 
 const drawerWidth = 320;
 
 const LargeLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <>
+      <ScrollRestoration />
       <Box
         sx={{
           ml: `${drawerWidth}px`,
