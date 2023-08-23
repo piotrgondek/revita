@@ -8,6 +8,7 @@ import {
   Grid,
   List,
   ListItem,
+  ListItemIcon,
   ListItemText,
   Stack,
   Typography,
@@ -19,6 +20,7 @@ import zabieg2 from "../assets/zabieg2.jpg";
 import specjalista from "../assets/specjalista.jpg";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
+import { Badge, CreditCard, SportsKabaddi } from "@mui/icons-material";
 
 const metody: ListCard = {
   title:
@@ -253,108 +255,118 @@ const RehabilitacjaDoroslych: React.FC = function () {
           im kompleksową opiekę i efektywne rezultaty.
         </ProminentText>
       </Container>
-      <Container maxWidth="xl">
-        <Box sx={{ mt: 2 }}>
-          <Grid container spacing={2} alignItems="stretch">
-            <Grid item xs={12} lg={6}>
-              <Card sx={{ height: 1 }}>
-                <CardMedia
-                  component="img"
-                  height="200px"
-                  image={zabieg}
-                  alt="Zabieg"
-                />
-                <CardHeader title={metody.title} />
-                <CardContent>
-                  <List dense>
-                    {metody.items.map(({ primary, secondary }) => (
-                      <ListItem key={`${primary}-${secondary}`}>
-                        <ListItemText primary={primary} secondary={secondary} />
-                      </ListItem>
-                    ))}
+      <Container maxWidth="lg">
+        <Stack spacing={2}>
+          <Card>
+            <CardMedia
+              component="img"
+              height="200px"
+              image={zabieg}
+              alt="Zabieg"
+            />
+            <CardHeader title={metody.title} />
+            <CardContent>
+              <List>
+                {metody.items.map(({ primary, secondary }) => (
+                  <ListItem key={`${primary}-${secondary}`}>
+                    <ListItemIcon>
+                      <SportsKabaddi />
+                    </ListItemIcon>
+                    <ListItemText primary={primary} secondary={secondary} />
+                  </ListItem>
+                ))}
+              </List>
+              <Container maxWidth="md">
+                <Typography textAlign="justify">
+                  W naszym ośrodku rehabilitacyjnym znajdziesz także różnorodne
+                  urządzenia do aktywności fizycznej, takie jak rower, bieżnia,
+                  poręcze, wibromasaż i wiele innych. Nasz zespół specjalistów
+                  jest gotowy, aby dostosować indywidualny plan terapeutyczny i
+                  wspierać Cię w osiągnięciu optymalnych wyników w procesie
+                  rehabilitacji.
+                </Typography>
+              </Container>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardMedia
+              component="img"
+              height="200px"
+              image={zabieg2}
+              alt="Zabieg"
+            />
+            <CardHeader title={cennik.title} />
+            <CardContent>
+              <Grid container>
+                <Grid item xs={12} md={6}>
+                  <List>
+                    {cennik.items
+                      .slice(0, Math.ceil(cennik.items.length / 2) + 1)
+                      .map(({ primary, secondary }) => (
+                        <ListItem key={`${primary}-${secondary}`}>
+                          <ListItemIcon>
+                            <CreditCard />
+                          </ListItemIcon>
+                          <ListItemText
+                            primary={primary}
+                            secondary={secondary}
+                          />
+                        </ListItem>
+                      ))}
                   </List>
-                  <Typography textAlign="justify">
-                    W naszym ośrodku rehabilitacyjnym znajdziesz także
-                    różnorodne urządzenia do aktywności fizycznej, takie jak
-                    rower, bieżnia, poręcze, wibromasaż i wiele innych. Nasz
-                    zespół specjalistów jest gotowy, aby dostosować indywidualny
-                    plan terapeutyczny i wspierać Cię w osiągnięciu optymalnych
-                    wyników w procesie rehabilitacji.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid item xs={12} lg={6}>
-              <Card sx={{ height: 1 }}>
-                <CardMedia
-                  component="img"
-                  height="200px"
-                  image={zabieg2}
-                  alt="Zabieg"
-                />
-                <CardHeader title={cennik.title} />
-                <CardContent>
-                  <Stack direction="row" spacing={2}>
-                    <List dense sx={{ flex: "0 0 50%" }}>
-                      {cennik.items
-                        .slice(0, Math.ceil(cennik.items.length / 2) + 1)
-                        .map(({ primary, secondary }) => (
-                          <ListItem key={`${primary}-${secondary}`}>
-                            <ListItemText
-                              primary={primary}
-                              secondary={secondary}
-                            />
-                          </ListItem>
-                        ))}
-                    </List>
-                    <List dense sx={{ flex: "0 0 50%" }}>
-                      {cennik.items
-                        .slice(Math.ceil(cennik.items.length / 2) + 1)
-                        .map(({ primary, secondary }) => (
-                          <ListItem key={`${primary}-${secondary}`}>
-                            <ListItemText
-                              primary={primary}
-                              secondary={secondary}
-                            />
-                          </ListItem>
-                        ))}
-                    </List>
-                  </Stack>
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-        </Box>
-      </Container>
-      <Container maxWidth="md">
-        <Stack spacing={2} sx={{ mt: 2 }}>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <List>
+                    {cennik.items
+                      .slice(Math.ceil(cennik.items.length / 2) + 1)
+                      .map(({ primary, secondary }) => (
+                        <ListItem key={`${primary}-${secondary}`}>
+                          <ListItemIcon>
+                            <CreditCard />
+                          </ListItemIcon>
+                          <ListItemText
+                            primary={primary}
+                            secondary={secondary}
+                          />
+                        </ListItem>
+                      ))}
+                  </List>
+                </Grid>
+              </Grid>
+            </CardContent>
+          </Card>
           <Card>
             <CardMedia
               component="img"
               height="200px"
               image={specjalista}
-              alt="Specjalista"
+              alt="Zabieg"
             />
             <CardHeader title={specjalisci.title} />
             <CardContent>
-              <List dense>
+              <List>
                 {specjalisci.items.map(({ primary, secondary }) => (
                   <ListItem key={`${primary}-${secondary}`}>
-                    <ListItemText primary={primary} />
+                    <ListItemIcon>
+                      <Badge />
+                    </ListItemIcon>
+                    <ListItemText primary={primary} secondary={secondary} />
                   </ListItem>
                 ))}
               </List>
             </CardContent>
           </Card>
-          <ProminentText>
-            Nasz zespół wciąż poszerza swoją wiedzę i umiejętności poprzez
-            uczestnictwo w różnorodnych szkoleniach i kursach, aby zapewnić
-            naszym pacjentom najwyższą jakość opieki. Każdy z naszych
-            fizjoterapeutów jest zaangażowany w indywidualne podejście do
-            pacjenta, dostosowując terapię do jego potrzeb i celów. Zaufaj
-            naszym specjalistom i oddaj swoje zdrowie w nasze ręce!
-          </ProminentText>
         </Stack>
+      </Container>
+      <Container maxWidth="md">
+        <ProminentText>
+          Nasz zespół wciąż poszerza swoją wiedzę i umiejętności poprzez
+          uczestnictwo w różnorodnych szkoleniach i kursach, aby zapewnić naszym
+          pacjentom najwyższą jakość opieki. Każdy z naszych fizjoterapeutów
+          jest zaangażowany w indywidualne podejście do pacjenta, dostosowując
+          terapię do jego potrzeb i celów. Zaufaj naszym specjalistom i oddaj
+          swoje zdrowie w nasze ręce!
+        </ProminentText>
       </Container>
     </>
   );
