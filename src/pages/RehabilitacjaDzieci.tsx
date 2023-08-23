@@ -24,7 +24,7 @@ import dzieci4 from "../assets/dzieci4.jpg";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
 import React from "react";
-import { Badge, Done } from "@mui/icons-material";
+import { Badge, CreditCard, SportsKabaddi } from "@mui/icons-material";
 
 const listaMetodTerap: Array<Pick<ListItemTextProps, "primary" | "secondary">> =
   [
@@ -158,11 +158,11 @@ const cennik: ListCard[][] = [
       title: "Neurologopeda/Psycholog",
       items: [
         {
-          primary: "Porada neurologopedyczna/psychologiczna",
+          primary: "Porada neurologopedyczna/ psychologiczna",
           secondary: "100 zł",
         },
         {
-          primary: "Wizyta neurologopedyczna/psychologiczna",
+          primary: "Wizyta neurologopedyczna/ psychologiczna",
           secondary: "120 zł",
         },
       ],
@@ -364,6 +364,9 @@ const RehabilitacjaDzieci: React.FC = function () {
                     <List>
                       {listaMetodTerap.map(({ primary, secondary }) => (
                         <ListItem key={`${primary}-${secondary}`}>
+                          <ListItemIcon>
+                            <SportsKabaddi />
+                          </ListItemIcon>
                           <ListItemText
                             primary={primary}
                             secondary={secondary}
@@ -393,6 +396,9 @@ const RehabilitacjaDzieci: React.FC = function () {
                     <List>
                       {listaInnychMetod.map(({ primary, secondary }) => (
                         <ListItem key={`${primary}-${secondary}`}>
+                          <ListItemIcon>
+                            <SportsKabaddi />
+                          </ListItemIcon>
                           <ListItemText
                             primary={primary}
                             secondary={secondary}
@@ -432,7 +438,7 @@ const RehabilitacjaDzieci: React.FC = function () {
                           {items.map(({ primary, secondary }) => (
                             <ListItem key={`${primary}-${secondary}`}>
                               <ListItemIcon>
-                                <Done />
+                                <CreditCard />
                               </ListItemIcon>
                               <ListItemText
                                 primary={
