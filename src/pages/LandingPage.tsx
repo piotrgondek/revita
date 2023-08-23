@@ -14,10 +14,12 @@ import {
   Container,
   CardHeader,
   CardActionArea,
+  ListItemIcon,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
+import { SportsKabaddi } from "@mui/icons-material";
 
 const LandingPage: React.FC = function () {
   return (
@@ -65,32 +67,47 @@ const LandingPage: React.FC = function () {
                 wykwalifikowani w pracy z najmłodszymi pacjentami. Stosujemy
                 uznane i skuteczne metody rehabilitacji, takie jak:
               </Typography>
-              <List dense>
+              <List>
                 <ListItem>
+                  <ListItemIcon>
+                    <SportsKabaddi />
+                  </ListItemIcon>
                   <ListItemText
                     primary="Metoda Vojty"
                     secondary="Innowacyjna terapia stymulująca rozwój ruchowy u dzieci."
                   />
                 </ListItem>
                 <ListItem>
+                  <ListItemIcon>
+                    <SportsKabaddi />
+                  </ListItemIcon>
                   <ListItemText
                     primary="Metoda NDT-Bobath"
                     secondary="Skoncentrowana na korygowaniu zaburzeń neuromotorycznych u dzieci."
                   />
                 </ListItem>
                 <ListItem>
+                  <ListItemIcon>
+                    <SportsKabaddi />
+                  </ListItemIcon>
                   <ListItemText
                     primary="Metoda PNF"
                     secondary="Wzmacniająca mięśnie i poprawiająca koordynację ruchową."
                   />
                 </ListItem>
                 <ListItem>
+                  <ListItemIcon>
+                    <SportsKabaddi />
+                  </ListItemIcon>
                   <ListItemText
                     primary="Terapia mięśniowo-powięziowa"
                     secondary="Łagodząca bóle i naprężenia mięśniowe."
                   />
                 </ListItem>
                 <ListItem>
+                  <ListItemIcon>
+                    <SportsKabaddi />
+                  </ListItemIcon>
                   <ListItemText
                     primary="Terapia manualna"
                     secondary="Terapeutyczne manipulacje wspomagające rozwój dziecka."
@@ -127,38 +144,56 @@ const LandingPage: React.FC = function () {
                 specjalistów oferuje kompleksową i skuteczną rehabilitację
                 dorosłych, korzystając z uznanych metod terapeutycznych, w tym:
               </Typography>
-              <List dense>
+              <List>
                 <ListItem>
+                  <ListItemIcon>
+                    <SportsKabaddi />
+                  </ListItemIcon>
                   <ListItemText
                     primary="Terapia Mulligana"
                     secondary="Innowacyjna metoda terapeutyczna, która skutecznie łagodzi bóle i poprawia funkcje stawów i kręgosłupa."
                   />
                 </ListItem>
                 <ListItem>
+                  <ListItemIcon>
+                    <SportsKabaddi />
+                  </ListItemIcon>
                   <ListItemText
                     primary="Terapia manualna"
                     secondary="Specjalistyczne manipulacje ręczne, które redukują napięcia mięśniowe i poprawiają zakres ruchu."
                   />
                 </ListItem>
                 <ListItem>
+                  <ListItemIcon>
+                    <SportsKabaddi />
+                  </ListItemIcon>
                   <ListItemText
                     primary="Kinesiology Taping"
                     secondary="Technika tapingu, która wspomaga pracę mięśni, zmniejsza ból i wspiera gojenie się tkanek."
                   />
                 </ListItem>
                 <ListItem>
+                  <ListItemIcon>
+                    <SportsKabaddi />
+                  </ListItemIcon>
                   <ListItemText
                     primary="Fizykoterapia "
                     secondary="Wykorzystujemy zaawansowane technologie fizykalne, takie jak laseroterapia, ultradźwięki czy elektrostymulacja, aby przyspieszyć proces rehabilitacji."
                   />
                 </ListItem>
                 <ListItem>
+                  <ListItemIcon>
+                    <SportsKabaddi />
+                  </ListItemIcon>
                   <ListItemText
                     primary="Ćwiczenia czynne"
                     secondary="Indywidualnie dostosowane ćwiczenia wzmacniające i rehabilitacyjne."
                   />
                 </ListItem>
                 <ListItem>
+                  <ListItemIcon>
+                    <SportsKabaddi />
+                  </ListItemIcon>
                   <ListItemText
                     primary="Masaże "
                     secondary="Terapeutyczne masaże, które redukują napięcie mięśniowe i przynoszą ulgę w dolegliwościach."
