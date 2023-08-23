@@ -14,7 +14,8 @@ const ProminentText = styled<
   },
   textAlign: "justify",
   fontStyle: "italic",
-  marginTop: "2rem",
+  marginTop: "4rem",
+  marginBottom: "4rem",
 });
 
 export default ProminentText;

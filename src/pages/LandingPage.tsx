@@ -13,10 +13,8 @@ import {
   ListItemText,
   Container,
   CardHeader,
-  IconButton,
   CardActionArea,
 } from "@mui/material";
-import { Link as LinkIcon } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
