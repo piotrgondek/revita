@@ -8,7 +8,9 @@ import {
   Grid,
   List,
   ListItem,
+  ListItemIcon,
   ListItemText,
+  ListSubheader,
   Stack,
   Typography,
 } from "@mui/material";
@@ -18,6 +20,7 @@ import zabieg from "../assets/zabieg3.jpg";
 import zabieg2 from "../assets/zabieg4.jpg";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
+import { Badge, CreditCard } from "@mui/icons-material";
 
 const cennik: ListCard = {
   title: "Cennik Domowej Rehabilitacji",
@@ -43,6 +46,47 @@ const cennik: ListCard = {
   ],
 };
 
+const specjalisci: ListCard[] = [
+  {
+    title: "Fizjoterapeuci",
+    items: [
+      {
+        primary: "mgr Średniawa Renata",
+      },
+      {
+        primary: "mgr Katarzyna Zima",
+      },
+      {
+        primary: "mgr Katarzyna Kandefer",
+      },
+      {
+        primary: "mgr Barbara Fornal",
+      },
+      {
+        primary: "mgr Damian Łysik",
+      },
+      {
+        primary: "mgr Ewa Łysik",
+      },
+      {
+        primary: "tech. masażysta Katarzyna Woźniak",
+      },
+      {
+        primary: "tech. fizjoterapii Katarzyna Safin",
+      },
+    ],
+  },
+  {
+    title: "Lekarz",
+    items: [
+      {
+        primary: "lek. Andrzej Kaczmarczyk",
+        secondary: "specjalista rehabilitacji medycznej",
+      },
+    ],
+  },
+];
+
 const RehabilitacjaDomowa: React.FC = function () {
   return (
     <>
@@ -59,89 +103,64 @@ const RehabilitacjaDomowa: React.FC = function () {
           oraz masaże w domu.
         </ProminentText>
       </Container>
-      <Container maxWidth="xl">
-        <Box sx={{ mt: 2 }}>
-          <Grid container spacing={2} alignItems="stretch">
-            <Grid item xs={12} lg={6}>
-              <Card sx={{ height: 1 }}>
-                <CardMedia
-                  component="img"
-                  height="200px"
-                  image={zabieg}
-                  alt="Zabieg"
-                />
-                <CardHeader title={cennik.title} subheader={cennik.subheader} />
-                <CardContent>
-                  <List dense>
-                    {cennik.items.map(({ primary, secondary }) => (
-                      <ListItem key={`${primary}-${secondary}`}>
-                        <ListItemText primary={primary} secondary={secondary} />
-                      </ListItem>
-                    ))}
-                  </List>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid item xs={12} lg={6}>
-              <Card sx={{ height: 1 }}>
-                <CardMedia
-                  component="img"
-                  height="200px"
-                  image={zabieg2}
-                  alt="Zabieg"
-                />
-                <CardHeader
-                  title="Zespół Specjalistów ds. Rehabilitacji Domowej"
-                  subheader="Nasz wykwalifikowany zespół specjalistów oferuje rehabilitację, ćwiczenia czynne, kontrolę stanu zdrowia oraz wykonywanie masaży w domu. Prosimy o kontakt z osobami zainteresowanymi rehabilitacją domową."
-                />
-                <CardContent>
-                  <Typography variant="h6">Nasi specjaliści</Typography>
-                  <Stack direction="row" spacing={2}>
-                    <Box flex="0 0 50%">
-                      <Typography variant="subtitle1">
-                        Fizjoterapeuci:
-                      </Typography>
-                      <List dense disablePadding>
-                        <ListItem>
-                          <ListItemText primary="mgr Średniawa Renata" />
+      <Container maxWidth="lg">
+        <Stack spacing={2}>
+          <Card sx={{ height: 1 }}>
+            <CardMedia
+              component="img"
+              height="200px"
+              image={zabieg}
+              alt="Zabieg"
+            />
+            <CardHeader title={cennik.title} subheader={cennik.subheader} />
+            <CardContent>
+              <List disablePadding>
+                {cennik.items.map(({ primary, secondary }) => (
+                  <ListItem key={`${primary}-${secondary}`}>
+                    <ListItemIcon>
+                      <CreditCard />
+                    </ListItemIcon>
+                    <ListItemText primary={primary} secondary={secondary} />
+                  </ListItem>
+                ))}
+              </List>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardMedia
+              component="img"
+              height="200px"
+              image={zabieg2}
+              alt="Zabieg"
+            />
+            <CardHeader
+              title="Zespół Specjalistów ds. Rehabilitacji Domowej"
+              subheader="Nasz wykwalifikowany zespół specjalistów oferuje rehabilitację, ćwiczenia czynne, kontrolę stanu zdrowia oraz wykonywanie masaży w domu. Prosimy o kontakt z osobami zainteresowanymi rehabilitacją domową."
+            />
+            <CardContent>
+              <Grid container>
+                {specjalisci.map(({ title, items }) => (
+                  <Grid item xs={12} lg={6} key={title}>
+                    <List disablePadding>
+                      <ListSubheader>{title}</ListSubheader>
+                      {items.map(({ primary, secondary }) => (
+                        <ListItem key={`${primary}-${secondary}`}>
+                          <ListItemIcon>
+                            <Badge />
+                          </ListItemIcon>
+                          <ListItemText
+                            primary={primary}
+                            secondary={secondary}
+                          />
                         </ListItem>
-                        <ListItem>
-                          <ListItemText primary="mgr Katarzyna Zima" />
-                        </ListItem>
-                        <ListItem>
-                          <ListItemText primary="mgr Katarzyna Kandefer" />
-                        </ListItem>
-                        <ListItem>
-                          <ListItemText primary="mgr Barbara Fornal" />
-                        </ListItem>
-                        <ListItem>
-                          <ListItemText primary="mgr Damian Łysik" />
-                        </ListItem>
-                        <ListItem>
-                          <ListItemText primary="mgr Ewa Łysik" />
-                        </ListItem>
-                        <ListItem>
-                          <ListItemText primary="tech. masażysta Katarzyna Woźniak" />
-                        </ListItem>
-                        <ListItem>
-                          <ListItemText primary="tech. fizjoterapii Katarzyna Safin" />
-                        </ListItem>
-                      </List>
-                    </Box>
-                    <Box flex="0 0 50%">
-                      <Typography variant="subtitle1">Lekarz:</Typography>
-                      <List dense disablePadding>
-                        <ListItem>
-                          <ListItemText primary="lek. Andrzej Kaczmarczyk - specjalista rehabilitacji medycznej" />
-                        </ListItem>
-                      </List>
-                    </Box>
-                  </Stack>
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-        </Box>
+                      ))}
+                    </List>
+                  </Grid>
+                ))}
+              </Grid>
+            </CardContent>
+          </Card>
+        </Stack>
       </Container>
       <Container maxWidth="md">
         <ProminentText>
