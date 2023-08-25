@@ -8,24 +8,43 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Stack,
   Typography,
   Link as MuiLink,
-  alpha,
   Grid,
 } from "@mui/material";
-import jpg from "../assets/dzieci5.jpg";
+import jpg from "../assets/imgs/outside/001.jpg";
 import {
   ContactPhone,
   LocationOn,
   Phone,
   WatchLater,
 } from "@mui/icons-material";
-import cergowa from "../assets/cergowa.jpg";
-import parkowa from "../assets/parkowa.jpg";
+import cergowa from "../assets/imgs/outside/002.jpg";
+import parkowa from "../assets/imgs/outside/007.jpg";
 import { Link } from "react-router-dom";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
+import ImageGallery, { ReactImageGalleryProps } from "react-image-gallery";
+import img01 from "../assets/imgs/outside/001.jpg";
+import img02 from "../assets/imgs/outside/002.jpg";
+import img03 from "../assets/imgs/outside/003.jpg";
+import img04 from "../assets/imgs/outside/004.jpg";
+import img05 from "../assets/imgs/outside/005.jpg";
+import img06 from "../assets/imgs/outside/006.jpg";
+import img07 from "../assets/imgs/outside/007.jpg";
+import arrayShuffle from "array-shuffle";
+
+const images: ReactImageGalleryProps["items"] = arrayShuffle([
+  img01,
+  img02,
+  img03,
+  img04,
+  img05,
+  img06,
+  img07,
+]).map((img) => ({
+  original: img,
+}));
 
 const Kontakt: React.FC = function () {
   return (
@@ -176,6 +195,14 @@ const Kontakt: React.FC = function () {
           </Grid>
         </Grid>
       </Container>
+      <Box mt={2}>
+        <ImageGallery
+          items={images}
+          lazyLoad
+          showPlayButton={false}
+          showFullscreenButton={false}
+        />
+      </Box>
     </>
   );
 };

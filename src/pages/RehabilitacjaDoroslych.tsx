@@ -13,14 +13,43 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import jpg from "../assets//rehabilitacja-doroslych.jpg";
+import jpg from "../assets/imgs/adults/004.jpg";
 import { ListCard } from "../types";
-import zabieg from "../assets/zabieg.jpg";
-import zabieg2 from "../assets/zabieg2.jpg";
-import specjalista from "../assets/specjalista.jpg";
+import zabieg from "../assets/imgs/adults/002.jpg";
+import zabieg2 from "../assets/imgs/adults/007.jpg";
+import specjalista from "../assets/imgs/adults/009.jpg";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
 import { Badge, CreditCard, SportsKabaddi } from "@mui/icons-material";
+import ImageGallery, { ReactImageGalleryProps } from "react-image-gallery";
+import img01 from "../assets/imgs/adults/001.jpg";
+import img02 from "../assets/imgs/adults/002.jpg";
+import img03 from "../assets/imgs/adults/003.jpg";
+import img04 from "../assets/imgs/adults/004.jpg";
+import img05 from "../assets/imgs/adults/005.jpg";
+import img06 from "../assets/imgs/adults/006.jpg";
+import img07 from "../assets/imgs/adults/007.jpg";
+import img08 from "../assets/imgs/adults/008.jpg";
+import img09 from "../assets/imgs/adults/009.jpg";
+import img10 from "../assets/imgs/adults/010.jpg";
+import img11 from "../assets/imgs/adults/011.jpg";
+import arrayShuffle from "array-shuffle";
+
+const images: ReactImageGalleryProps["items"] = arrayShuffle([
+  img01,
+  img02,
+  img03,
+  img04,
+  img05,
+  img06,
+  img07,
+  img08,
+  img09,
+  img10,
+  img11,
+]).map((img) => ({
+  original: img,
+}));
 
 const metody: ListCard = {
   title:
@@ -368,6 +397,14 @@ const RehabilitacjaDoroslych: React.FC = function () {
           swoje zdrowie w nasze ręce!
         </ProminentText>
       </Container>
+      <Box mt={2}>
+        <ImageGallery
+          items={images}
+          lazyLoad
+          showPlayButton={false}
+          showFullscreenButton={false}
+        />
+      </Box>
     </>
   );
 };

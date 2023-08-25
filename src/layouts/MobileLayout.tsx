@@ -1,7 +1,6 @@
 import { Menu, Phone } from "@mui/icons-material";
 import {
   AppBar,
-  Box,
   Drawer,
   Toolbar,
   Typography,
@@ -32,13 +31,7 @@ const MobileLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Toolbar />
-      <Box
-        sx={{
-          pb: 4,
-        }}
-      >
-        {children}
-      </Box>
+      {children}
       <AppBar>
         <Toolbar>
           <IconButton

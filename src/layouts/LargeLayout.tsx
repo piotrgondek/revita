@@ -16,7 +16,6 @@ const LargeLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
         {children}
         <Toolbar
           sx={{
-            mt: 2,
             backgroundColor: "primary.main",
           }}
         />

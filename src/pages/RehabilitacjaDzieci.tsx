@@ -1,3 +1,4 @@
+import ImageGallery, { ReactImageGalleryProps } from "react-image-gallery";
 import {
   Box,
   Card,
@@ -15,16 +16,110 @@ import {
   ListSubheader,
   ListItemIcon,
 } from "@mui/material";
-import jpg from "../assets/rehabilitacja-dzieci.jpg";
+import jpg from "../assets/imgs/kids/039.jpg";
 import { ListCard } from "../types";
-import dzieci from "../assets/dzieci.jpg";
-import dzieci2 from "../assets/dzieci2.jpg";
-import dzieci3 from "../assets/dzieci3.jpg";
-import dzieci4 from "../assets/dzieci4.jpg";
+import dzieci from "../assets/imgs/kids/001.jpg";
+import dzieci2 from "../assets/imgs/kids/010.jpg";
+import dzieci3 from "../assets/imgs/kids/007.jpg";
+import dzieci4 from "../assets/imgs/kids/024.jpg";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
 import React from "react";
 import { Badge, CreditCard, SportsKabaddi } from "@mui/icons-material";
+import img01 from "../assets/imgs/kids/001.jpg";
+import img02 from "../assets/imgs/kids/002.jpg";
+import img03 from "../assets/imgs/kids/003.jpg";
+import img04 from "../assets/imgs/kids/004.jpg";
+import img05 from "../assets/imgs/kids/005.jpg";
+import img06 from "../assets/imgs/kids/006.jpg";
+import img07 from "../assets/imgs/kids/007.jpg";
+import img08 from "../assets/imgs/kids/008.jpg";
+import img09 from "../assets/imgs/kids/009.jpg";
+import img10 from "../assets/imgs/kids/010.jpg";
+import img11 from "../assets/imgs/kids/011.jpg";
+import img12 from "../assets/imgs/kids/012.jpg";
+import img13 from "../assets/imgs/kids/013.jpg";
+import img14 from "../assets/imgs/kids/014.jpg";
+import img15 from "../assets/imgs/kids/015.jpg";
+import img16 from "../assets/imgs/kids/016.jpg";
+import img17 from "../assets/imgs/kids/017.jpg";
+import img18 from "../assets/imgs/kids/018.jpg";
+import img19 from "../assets/imgs/kids/019.jpg";
+import img20 from "../assets/imgs/kids/020.jpg";
+import img21 from "../assets/imgs/kids/021.jpg";
+import img22 from "../assets/imgs/kids/022.jpg";
+import img23 from "../assets/imgs/kids/023.jpg";
+import img24 from "../assets/imgs/kids/024.jpg";
+import img25 from "../assets/imgs/kids/025.jpg";
+import img26 from "../assets/imgs/kids/026.jpg";
+import img27 from "../assets/imgs/kids/027.jpg";
+import img28 from "../assets/imgs/kids/028.jpg";
+import img29 from "../assets/imgs/kids/029.jpg";
+import img30 from "../assets/imgs/kids/030.jpg";
+import img31 from "../assets/imgs/kids/031.jpg";
+import img32 from "../assets/imgs/kids/032.jpg";
+import img33 from "../assets/imgs/kids/033.jpg";
+import img34 from "../assets/imgs/kids/034.jpg";
+import img35 from "../assets/imgs/kids/035.jpg";
+import img36 from "../assets/imgs/kids/036.jpg";
+import img37 from "../assets/imgs/kids/037.jpg";
+import img38 from "../assets/imgs/kids/038.jpg";
+import img39 from "../assets/imgs/kids/039.jpg";
+import img40 from "../assets/imgs/kids/040.jpg";
+import img41 from "../assets/imgs/kids/041.jpg";
+import img42 from "../assets/imgs/kids/042.jpg";
+import img43 from "../assets/imgs/kids/043.jpg";
+import img44 from "../assets/imgs/kids/044.jpg";
+import arrayShuffle from "array-shuffle";
+
+const images: ReactImageGalleryProps["items"] = arrayShuffle([
+  img01,
+  img02,
+  img03,
+  img04,
+  img05,
+  img06,
+  img07,
+  img08,
+  img09,
+  img10,
+  img11,
+  img12,
+  img13,
+  img14,
+  img15,
+  img16,
+  img17,
+  img18,
+  img19,
+  img20,
+  img21,
+  img22,
+  img23,
+  img24,
+  img25,
+  img26,
+  img27,
+  img28,
+  img29,
+  img30,
+  img31,
+  img32,
+  img33,
+  img34,
+  img35,
+  img36,
+  img37,
+  img38,
+  img39,
+  img40,
+  img41,
+  img42,
+  img43,
+  img44,
+]).map((img) => ({
+  original: img,
+}));
 
 const listaMetodTerap: Array<Pick<ListItemTextProps, "primary" | "secondary">> =
   [
@@ -518,6 +613,14 @@ const RehabilitacjaDzieci: React.FC = function () {
           terapeutyczne.
         </ProminentText>
       </Container>
+      <Box mt={2}>
+        <ImageGallery
+          items={images}
+          lazyLoad
+          showPlayButton={false}
+          showFullscreenButton={false}
+        />
+      </Box>{" "}
     </>
   );
 };

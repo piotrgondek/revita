@@ -1,6 +1,6 @@
-import revitaDukla from "../assets/revita-dukla.jpg";
-import rehabilitacjaDzieci from "../assets/rehabilitacja-dzieci.jpg";
-import rehabilitacjaDoroslych from "../assets/rehabilitacja-doroslych.jpg";
+import revitaDukla from "../assets/imgs/outside/003.jpg";
+import rehabilitacjaDzieci from "../assets/imgs/kids/039.jpg";
+import rehabilitacjaDoroslych from "../assets/imgs/adults/004.jpg";
 import rehabilitacjaDomowa from "../assets/rehabilitacja-domowa.jpg";
 import {
   Stack,
@@ -15,11 +15,107 @@ import {
   CardHeader,
   CardActionArea,
   ListItemIcon,
+  Box,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
 import { SportsKabaddi } from "@mui/icons-material";
+import ImageGallery, { ReactImageGalleryProps } from "react-image-gallery";
+import img01 from "../assets/imgs/inside/001.jpg";
+import img02 from "../assets/imgs/inside/002.jpg";
+import img03 from "../assets/imgs/inside/003.jpg";
+import img04 from "../assets/imgs/inside/004.jpg";
+import img05 from "../assets/imgs/inside/005.jpg";
+import img06 from "../assets/imgs/inside/006.jpg";
+import img07 from "../assets/imgs/inside/007.jpg";
+import img08 from "../assets/imgs/inside/008.jpg";
+import img09 from "../assets/imgs/inside/009.jpg";
+import img10 from "../assets/imgs/inside/010.jpg";
+import img11 from "../assets/imgs/inside/011.jpg";
+import img12 from "../assets/imgs/inside/012.jpg";
+import img13 from "../assets/imgs/inside/013.jpg";
+import img14 from "../assets/imgs/inside/014.jpg";
+import img15 from "../assets/imgs/inside/015.jpg";
+import img16 from "../assets/imgs/inside/016.jpg";
+import img17 from "../assets/imgs/inside/017.jpg";
+import img18 from "../assets/imgs/inside/018.jpg";
+import img19 from "../assets/imgs/inside/019.jpg";
+import img20 from "../assets/imgs/inside/020.jpg";
+import img21 from "../assets/imgs/inside/021.jpg";
+import img22 from "../assets/imgs/inside/022.jpg";
+import img23 from "../assets/imgs/inside/023.jpg";
+import img24 from "../assets/imgs/inside/024.jpg";
+import img25 from "../assets/imgs/inside/025.jpg";
+import img26 from "../assets/imgs/inside/026.jpg";
+import img27 from "../assets/imgs/inside/027.jpg";
+import img28 from "../assets/imgs/inside/028.jpg";
+import img29 from "../assets/imgs/inside/029.jpg";
+import img30 from "../assets/imgs/inside/030.jpg";
+import img31 from "../assets/imgs/inside/031.jpg";
+import img32 from "../assets/imgs/inside/032.jpg";
+import img33 from "../assets/imgs/inside/033.jpg";
+import img34 from "../assets/imgs/inside/034.jpg";
+import img35 from "../assets/imgs/inside/035.jpg";
+import img36 from "../assets/imgs/inside/036.jpg";
+import img37 from "../assets/imgs/inside/037.jpg";
+import img38 from "../assets/imgs/inside/038.jpg";
+import img39 from "../assets/imgs/inside/039.jpg";
+import img40 from "../assets/imgs/inside/040.jpg";
+import img41 from "../assets/imgs/inside/041.jpg";
+import img42 from "../assets/imgs/inside/042.jpg";
+import img43 from "../assets/imgs/inside/043.jpg";
+import img44 from "../assets/imgs/inside/044.jpg";
+import arrayShuffle from "array-shuffle";
+
+const images: ReactImageGalleryProps["items"] = arrayShuffle([
+  img01,
+  img02,
+  img03,
+  img04,
+  img05,
+  img06,
+  img07,
+  img08,
+  img09,
+  img10,
+  img11,
+  img12,
+  img13,
+  img14,
+  img15,
+  img16,
+  img17,
+  img18,
+  img19,
+  img20,
+  img21,
+  img22,
+  img23,
+  img24,
+  img25,
+  img26,
+  img27,
+  img28,
+  img29,
+  img30,
+  img31,
+  img32,
+  img33,
+  img34,
+  img35,
+  img36,
+  img37,
+  img38,
+  img39,
+  img40,
+  img41,
+  img42,
+  img43,
+  img44,
+]).map((img) => ({
+  original: img,
+}));
 
 const LandingPage: React.FC = function () {
   return (
@@ -245,6 +341,14 @@ const LandingPage: React.FC = function () {
           </Card>
         </Stack>
       </Container>
+      <Box mt={2}>
+        <ImageGallery
+          items={images}
+          lazyLoad
+          showPlayButton={false}
+          showFullscreenButton={false}
+        />
+      </Box>
     </>
   );
 };

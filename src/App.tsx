@@ -6,6 +6,7 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import MobileLayout from "./layouts/MobileLayout";
 import LargeLayout from "./layouts/LargeLayout";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 const App: React.FC = function () {
   const theme = useTheme();
