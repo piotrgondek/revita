@@ -1,5 +1,4 @@
 import {
-  Box,
   Card,
   CardContent,
   CardHeader,
@@ -12,12 +11,11 @@ import {
   ListItemText,
   ListSubheader,
   Stack,
-  Typography,
 } from "@mui/material";
-import jpg from "../assets/rehabilitacja-domowa.jpg";
+import webp from "../assets/rehabilitacja-domowa.webp";
 import { ListCard } from "../types";
-import zabieg from "../assets/zabieg3.jpg";
-import zabieg2 from "../assets/zabieg4.jpg";
+import zabieg from "../assets/zabieg3.webp";
+import zabieg2 from "../assets/zabieg4.webp";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
 import { Badge, CreditCard } from "@mui/icons-material";
@@ -91,7 +89,7 @@ const RehabilitacjaDomowa: React.FC = function () {
   return (
     <>
       <HeroImage
-        img={jpg}
+        img={webp}
         text="Rehabilitacja Domowa - Ćwiczenia czynne i terapie w zaciszu Twojego domu"
       />
       <Container maxWidth="md">

@@ -13,26 +13,26 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import jpg from "../assets/imgs/adults/004.jpg";
+import img from "../assets/imgs/adults/004.webp";
 import { ListCard } from "../types";
-import zabieg from "../assets/imgs/adults/002.jpg";
-import zabieg2 from "../assets/imgs/adults/007.jpg";
-import specjalista from "../assets/imgs/adults/009.jpg";
+import zabieg from "../assets/imgs/adults/002.webp";
+import zabieg2 from "../assets/imgs/adults/007.webp";
+import specjalista from "../assets/imgs/adults/009.webp";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
 import { Badge, CreditCard, SportsKabaddi } from "@mui/icons-material";
 import ImageGallery, { ReactImageGalleryProps } from "react-image-gallery";
-import img01 from "../assets/imgs/adults/001.jpg";
-import img02 from "../assets/imgs/adults/002.jpg";
-import img03 from "../assets/imgs/adults/003.jpg";
-import img04 from "../assets/imgs/adults/004.jpg";
-import img05 from "../assets/imgs/adults/005.jpg";
-import img06 from "../assets/imgs/adults/006.jpg";
-import img07 from "../assets/imgs/adults/007.jpg";
-import img08 from "../assets/imgs/adults/008.jpg";
-import img09 from "../assets/imgs/adults/009.jpg";
-import img10 from "../assets/imgs/adults/010.jpg";
-import img11 from "../assets/imgs/adults/011.jpg";
+import img01 from "../assets/imgs/adults/001.webp";
+import img02 from "../assets/imgs/adults/002.webp";
+import img03 from "../assets/imgs/adults/003.webp";
+import img04 from "../assets/imgs/adults/004.webp";
+import img05 from "../assets/imgs/adults/005.webp";
+import img06 from "../assets/imgs/adults/006.webp";
+import img07 from "../assets/imgs/adults/007.webp";
+import img08 from "../assets/imgs/adults/008.webp";
+import img09 from "../assets/imgs/adults/009.webp";
+import img10 from "../assets/imgs/adults/010.webp";
+import img11 from "../assets/imgs/adults/011.webp";
 import arrayShuffle from "array-shuffle";
 
 const images: ReactImageGalleryProps["items"] = arrayShuffle([
@@ -270,7 +270,7 @@ const RehabilitacjaDoroslych: React.FC = function () {
   return (
     <>
       <HeroImage
-        img={jpg}
+        img={img}
         text="Rehabilitacja dla dorosłych - Odkryj pełen zakres skutecznych metod terapeutycznych"
       />
       <Container maxWidth="md">

@@ -12,26 +12,26 @@ import {
   Link as MuiLink,
   Grid,
 } from "@mui/material";
-import jpg from "../assets/imgs/outside/001.jpg";
+import webp from "../assets/imgs/outside/001.webp";
 import {
   ContactPhone,
   LocationOn,
   Phone,
   WatchLater,
 } from "@mui/icons-material";
-import cergowa from "../assets/imgs/outside/002.jpg";
-import parkowa from "../assets/imgs/outside/007.jpg";
+import cergowa from "../assets/imgs/outside/002.webp";
+import parkowa from "../assets/imgs/outside/007.webp";
 import { Link } from "react-router-dom";
 import HeroImage from "../components/HeroImage";
 import ProminentText from "../components/ProminentText";
 import ImageGallery, { ReactImageGalleryProps } from "react-image-gallery";
-import img01 from "../assets/imgs/outside/001.jpg";
-import img02 from "../assets/imgs/outside/002.jpg";
-import img03 from "../assets/imgs/outside/003.jpg";
-import img04 from "../assets/imgs/outside/004.jpg";
-import img05 from "../assets/imgs/outside/005.jpg";
-import img06 from "../assets/imgs/outside/006.jpg";
-import img07 from "../assets/imgs/outside/007.jpg";
+import img01 from "../assets/imgs/outside/001.webp";
+import img02 from "../assets/imgs/outside/002.webp";
+import img03 from "../assets/imgs/outside/003.webp";
+import img04 from "../assets/imgs/outside/004.webp";
+import img05 from "../assets/imgs/outside/005.webp";
+import img06 from "../assets/imgs/outside/006.webp";
+import img07 from "../assets/imgs/outside/007.webp";
 import arrayShuffle from "array-shuffle";
 
 const images: ReactImageGalleryProps["items"] = arrayShuffle([
@@ -50,7 +50,7 @@ const Kontakt: React.FC = function () {
   return (
     <>
       <HeroImage
-        img={jpg}
+        img={webp}
         text="Zapraszamy do skontaktowania się z naszym zespołem!"
       />
       <Container maxWidth="md">
