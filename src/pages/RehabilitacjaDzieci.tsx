@@ -117,9 +117,11 @@ const images: ReactImageGalleryProps["items"] = arrayShuffle([
   img42,
   img43,
   img44,
-]).map((img) => ({
-  original: img,
-}));
+])
+  .filter((img) => ![webp, dzieci, dzieci2, dzieci3, dzieci4].includes(img))
+  .map((img) => ({
+    original: img,
+  }));
 
 const listaMetodTerap: Array<Pick<ListItemTextProps, "primary" | "secondary">> =
   [

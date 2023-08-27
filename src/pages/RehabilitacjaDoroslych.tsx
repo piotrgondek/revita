@@ -13,7 +13,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import img from "../assets/imgs/adults/004.webp";
+import heroImg from "../assets/imgs/adults/004.webp";
 import { ListCard } from "../types";
 import zabieg from "../assets/imgs/adults/002.webp";
 import zabieg2 from "../assets/imgs/adults/007.webp";
@@ -47,9 +47,11 @@ const images: ReactImageGalleryProps["items"] = arrayShuffle([
   img09,
   img10,
   img11,
-]).map((img) => ({
-  original: img,
-}));
+])
+  .filter((img) => ![heroImg, zabieg, zabieg2, specjalista].includes(img))
+  .map((img) => ({
+    original: img,
+  }));
 
 const metody: ListCard = {
   title:
@@ -270,7 +272,7 @@ const RehabilitacjaDoroslych: React.FC = function () {
   return (
     <>
       <HeroImage
-        img={img}
+        img={heroImg}
         text="Rehabilitacja dla dorosłych - Odkryj pełen zakres skutecznych metod terapeutycznych"
       />
       <Container maxWidth="md">

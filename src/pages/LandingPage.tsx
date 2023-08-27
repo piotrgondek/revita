@@ -113,9 +113,19 @@ const images: ReactImageGalleryProps["items"] = arrayShuffle([
   img42,
   img43,
   img44,
-]).map((img) => ({
-  original: img,
-}));
+])
+  .filter(
+    (img) =>
+      ![
+        revitaDukla,
+        rehabilitacjaDzieci,
+        rehabilitacjaDoroslych,
+        rehabilitacjaDomowa,
+      ].includes(img),
+  )
+  .map((img) => ({
+    original: img,
+  }));
 
 const LandingPage: React.FC = function () {
   return (

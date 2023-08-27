@@ -42,9 +42,11 @@ const images: ReactImageGalleryProps["items"] = arrayShuffle([
   img05,
   img06,
   img07,
-]).map((img) => ({
-  original: img,
-}));
+])
+  .filter((img) => ![webp, cergowa, parkowa].includes(img))
+  .map((img) => ({
+    original: img,
+  }));
 
 const Kontakt: React.FC = function () {
   return (
