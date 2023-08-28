@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "postbuild": "node ./scripts/sitemap.cjs",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
@@ -41,6 +42,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "gh-pages": "^5.0.0",
     "prettier": "^3.0.0",
+    "sitemap": "^7.1.1",
     "typescript": "^5.1.6",
     "vite": "^4.4.8"
   }
