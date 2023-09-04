@@ -1,10 +1,15 @@
-import { createHashRouter } from "react-router-dom";
+import { Navigate, createHashRouter } from "react-router-dom";
 import App from "./App";
 import LandingPage from "./pages/LandingPage";
-import RehabilitacjaDzieci from "./pages/RehabilitacjaDzieci";
-import RehabilitacjaDoroslych from "./pages/RehabilitacjaDoroslych";
-import RehabilitacjaDomowa from "./pages/RehabilitacjaDomowa";
-import Kontakt from "./pages/Kontakt";
+import { lazy } from "react";
+import { SuspenseWrapper } from "./components/SuspenseWrapper";
+
+const RehabilitacjaDzieci = lazy(() => import("./pages/RehabilitacjaDzieci"));
+const RehabilitacjaDoroslych = lazy(
+  () => import("./pages/RehabilitacjaDoroslych"),
+);
+const RehabilitacjaDomowa = lazy(() => import("./pages/RehabilitacjaDomowa"));
+const Kontakt = lazy(() => import("./pages/Kontakt"));
 
 export default createHashRouter([
   {
@@ -17,20 +22,24 @@ export default createHashRouter([
       },
       {
         path: "rehabilitacja-dzieci",
-        element: <RehabilitacjaDzieci />,
+        element: <SuspenseWrapper component={RehabilitacjaDzieci} />,
       },
       {
         path: "rehabilitacja-doroslych",
-        element: <RehabilitacjaDoroslych />,
+        element: <SuspenseWrapper component={RehabilitacjaDoroslych} />,
       },
       {
         path: "rehabilitacja-domowa",
-        element: <RehabilitacjaDomowa />,
+        element: <SuspenseWrapper component={RehabilitacjaDomowa} />,
       },
       {
         path: "kontakt",
-        element: <Kontakt />,
+        element: <SuspenseWrapper component={Kontakt} />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <Navigate to="/" />,
   },
 ]);
