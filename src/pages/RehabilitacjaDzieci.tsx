@@ -123,61 +123,57 @@ const images: ReactImageGalleryProps["items"] = arrayShuffle([
     original: img,
   }));
 
-const listaMetodTerap: Array<Pick<ListItemTextProps, "primary" | "secondary">> =
-  [
-    {
-      primary: "Metoda Vojty",
-      secondary:
-        "Skuteczna terapia stymulująca rozwój ruchowy u dzieci w wieku rozwojowym.",
-    },
+const listaMetodTerap: Pick<ListItemTextProps, "primary" | "secondary">[] = [
+  {
+    primary: "Metoda Vojty",
+    secondary:
+      "Skuteczna terapia stymulująca rozwój ruchowy u dzieci w wieku rozwojowym.",
+  },
 
-    {
-      primary: "Metoda NDT-Bobath",
-      secondary:
-        "Specjalistyczna technika wspomagająca korygowanie zaburzeń neuromotorycznych u najmłodszych pacjentów.",
-    },
-    {
-      primary: "Metoda PNF",
-      secondary:
-        "Terapia wzmacniająca mięśnie i poprawiająca koordynację ruchową.",
-    },
-    {
-      primary: "Terapia mięśniowo-powięziowa",
-      secondary: "Pomocna w łagodzeniu bólów i napięć mięśniowych.",
-    },
-    {
-      primary: "Metoda integracji sensorycznej (SI)",
-      secondary:
-        "Skierowana do dzieci z zaburzeniami sensorycznymi, aby wspomagać ich rozwój.",
-    },
-    {
-      primary: "Kombinezony dynamiczne DUNAG 02",
-      secondary:
-        "Innowacyjne rozwiązanie wspierające poprawę funkcji ruchowych.",
-    },
-    {
-      primary: "Kinesiology Taping",
-      secondary: "Technika tapingu, która pomaga w pracy mięśni i stawów.",
-    },
-    {
-      primary: "Terapia manualna",
-      secondary:
-        "Metoda terapeutyczna, która korzysta z manipulacji ręcznych dla osiągnięcia pozytywnych efektów.",
-    },
-    {
-      primary: "Terapia ręki",
-      secondary:
-        "Specjalistyczne podejście do rehabilitacji rąk po urazach i urazach pourazowych.",
-    },
-    {
-      primary: "Trójpłaszczyznowa manualna terapia stóp",
-      secondary: "Skupia się na poprawie wad postawy stóp u dzieci.",
-    },
-  ];
+  {
+    primary: "Metoda NDT-Bobath",
+    secondary:
+      "Specjalistyczna technika wspomagająca korygowanie zaburzeń neuromotorycznych u najmłodszych pacjentów.",
+  },
+  {
+    primary: "Metoda PNF",
+    secondary:
+      "Terapia wzmacniająca mięśnie i poprawiająca koordynację ruchową.",
+  },
+  {
+    primary: "Terapia mięśniowo-powięziowa",
+    secondary: "Pomocna w łagodzeniu bólów i napięć mięśniowych.",
+  },
+  {
+    primary: "Metoda integracji sensorycznej (SI)",
+    secondary:
+      "Skierowana do dzieci z zaburzeniami sensorycznymi, aby wspomagać ich rozwój.",
+  },
+  {
+    primary: "Kombinezony dynamiczne DUNAG 02",
+    secondary: "Innowacyjne rozwiązanie wspierające poprawę funkcji ruchowych.",
+  },
+  {
+    primary: "Kinesiology Taping",
+    secondary: "Technika tapingu, która pomaga w pracy mięśni i stawów.",
+  },
+  {
+    primary: "Terapia manualna",
+    secondary:
+      "Metoda terapeutyczna, która korzysta z manipulacji ręcznych dla osiągnięcia pozytywnych efektów.",
+  },
+  {
+    primary: "Terapia ręki",
+    secondary:
+      "Specjalistyczne podejście do rehabilitacji rąk po urazach i urazach pourazowych.",
+  },
+  {
+    primary: "Trójpłaszczyznowa manualna terapia stóp",
+    secondary: "Skupia się na poprawie wad postawy stóp u dzieci.",
+  },
+];
 
-const listaInnychMetod: Array<
-  Pick<ListItemTextProps, "primary" | "secondary">
-> = [
+const listaInnychMetod: Pick<ListItemTextProps, "primary" | "secondary">[] = [
   {
     primary: "EEG-Biofeedback (Mind Plus)",
     secondary:
@@ -460,7 +456,9 @@ const RehabilitacjaDzieci: React.FC = function () {
                     </Typography>
                     <List>
                       {listaMetodTerap.map(({ primary, secondary }) => (
-                        <ListItem key={`${primary}-${secondary}`}>
+                        <ListItem
+                          key={`${primary?.toString()}-${secondary?.toString()}`}
+                        >
                           <ListItemIcon>
                             <SportsKabaddi />
                           </ListItemIcon>
@@ -492,7 +490,9 @@ const RehabilitacjaDzieci: React.FC = function () {
                     </Typography>
                     <List>
                       {listaInnychMetod.map(({ primary, secondary }) => (
-                        <ListItem key={`${primary}-${secondary}`}>
+                        <ListItem
+                          key={`${primary?.toString()}-${secondary?.toString()}`}
+                        >
                           <ListItemIcon>
                             <SportsKabaddi />
                           </ListItemIcon>
@@ -533,7 +533,9 @@ const RehabilitacjaDzieci: React.FC = function () {
                         <React.Fragment key={title}>
                           <ListSubheader>{title}</ListSubheader>
                           {items.map(({ primary, secondary }) => (
-                            <ListItem key={`${primary}-${secondary}`}>
+                            <ListItem
+                              key={`${primary?.toString()}-${secondary?.toString()}`}
+                            >
                               <ListItemIcon>
                                 <CreditCard />
                               </ListItemIcon>
@@ -571,7 +573,9 @@ const RehabilitacjaDzieci: React.FC = function () {
                         <React.Fragment key={title}>
                           <ListSubheader>{title}</ListSubheader>
                           {items.map(({ primary, secondary }) => (
-                            <ListItem key={`${primary}-${secondary}`}>
+                            <ListItem
+                              key={`${primary?.toString()}-${secondary?.toString()}`}
+                            >
                               <ListItemIcon>
                                 <Badge />
                               </ListItemIcon>

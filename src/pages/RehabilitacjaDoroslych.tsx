@@ -299,7 +299,9 @@ const RehabilitacjaDoroslych: React.FC = function () {
             <CardContent>
               <List>
                 {metody.items.map(({ primary, secondary }) => (
-                  <ListItem key={`${primary}-${secondary}`}>
+                  <ListItem
+                    key={`${primary?.toString()}-${secondary?.toString()}`}
+                  >
                     <ListItemIcon>
                       <SportsKabaddi />
                     </ListItemIcon>
@@ -334,7 +336,9 @@ const RehabilitacjaDoroslych: React.FC = function () {
                     {cennik.items
                       .slice(0, Math.ceil(cennik.items.length / 2) + 1)
                       .map(({ primary, secondary }) => (
-                        <ListItem key={`${primary}-${secondary}`}>
+                        <ListItem
+                          key={`${primary?.toString()}-${secondary?.toString()}`}
+                        >
                           <ListItemIcon>
                             <CreditCard />
                           </ListItemIcon>
@@ -351,7 +355,9 @@ const RehabilitacjaDoroslych: React.FC = function () {
                     {cennik.items
                       .slice(Math.ceil(cennik.items.length / 2) + 1)
                       .map(({ primary, secondary }) => (
-                        <ListItem key={`${primary}-${secondary}`}>
+                        <ListItem
+                          key={`${primary?.toString()}-${secondary?.toString()}`}
+                        >
                           <ListItemIcon>
                             <CreditCard />
                           </ListItemIcon>
@@ -377,7 +383,9 @@ const RehabilitacjaDoroslych: React.FC = function () {
             <CardContent>
               <List>
                 {specjalisci.items.map(({ primary, secondary }) => (
-                  <ListItem key={`${primary}-${secondary}`}>
+                  <ListItem
+                    key={`${primary?.toString()}-${secondary?.toString()}`}
+                  >
                     <ListItemIcon>
                       <Badge />
                     </ListItemIcon>

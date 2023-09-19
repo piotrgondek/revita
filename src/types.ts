@@ -1,7 +1,7 @@
 import { ListItemTextProps } from "@mui/material";
 
-export type ListCard = {
+export interface ListCard {
   title: string;
   subheader?: string;
-  items: Array<Pick<ListItemTextProps, "primary" | "secondary">>;
-};
+  items: Pick<ListItemTextProps, "primary" | "secondary">[];
+}

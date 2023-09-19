@@ -25,7 +25,7 @@ import {
 } from "@mui/material";
 import { Link, useMatches } from "react-router-dom";
 
-const links: Array<
+const links: (
   | ({
       to: string;
       icon: JSX.Element;
@@ -34,7 +34,7 @@ const links: Array<
       target?: "_blank";
     } & Pick<ListItemProps, "secondaryAction">)
   | "divider"
-> = [
+)[] = [
   {
     to: "/",
     icon: <Home />,

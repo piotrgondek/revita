@@ -114,7 +114,9 @@ const RehabilitacjaDomowa: React.FC = function () {
             <CardContent>
               <List disablePadding>
                 {cennik.items.map(({ primary, secondary }) => (
-                  <ListItem key={`${primary}-${secondary}`}>
+                  <ListItem
+                    key={`${primary?.toString()}-${secondary?.toString()}`}
+                  >
                     <ListItemIcon>
                       <CreditCard />
                     </ListItemIcon>
@@ -142,7 +144,9 @@ const RehabilitacjaDomowa: React.FC = function () {
                     <List disablePadding>
                       <ListSubheader>{title}</ListSubheader>
                       {items.map(({ primary, secondary }) => (
-                        <ListItem key={`${primary}-${secondary}`}>
+                        <ListItem
+                          key={`${primary?.toString()}-${secondary?.toString()}`}
+                        >
                           <ListItemIcon>
                             <Badge />
                           </ListItemIcon>

@@ -1,9 +1,9 @@
 import { Box, Typography, alpha } from "@mui/material";
 
-export type HeroImageProps = {
+export interface HeroImageProps {
   img: string;
   text: string;
-};
+}
 
 const HeroImage: React.FC<HeroImageProps> = function ({ img, text }) {
   return (
