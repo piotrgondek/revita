@@ -152,7 +152,7 @@ const LandingPage: React.FC = function () {
                 component="img"
                 height="300px"
                 image={rehabilitacjaDzieci}
-                alt="Rehabilitacja Dzieci"
+                alt=""
               />
               <CardHeader
                 title={
@@ -228,7 +228,7 @@ const LandingPage: React.FC = function () {
                 component="img"
                 height="300px"
                 image={rehabilitacjaDoroslych}
-                alt="Rehabilitacja Dorosłych"
+                alt=""
               />
               <CardHeader
                 title={
@@ -313,7 +313,7 @@ const LandingPage: React.FC = function () {
                 component="img"
                 height="300px"
                 image={rehabilitacjaDomowa}
-                alt="Rehabilitacja Domowa"
+                alt=""
               />
               <CardHeader
                 title={

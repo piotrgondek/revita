@@ -10,6 +10,7 @@ const HeroImage: React.FC<HeroImageProps> = function ({ img, text }) {
     <Box
       sx={{
         height: "50vh",
+        maxHeight: 1280,
         backgroundImage: `url(${img})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
