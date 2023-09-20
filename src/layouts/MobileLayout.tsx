@@ -66,6 +66,7 @@ const MobileLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
         size="medium"
         component="a"
         href="tel:660596511"
+        aria-label="Revita numer telefonu"
         sx={{
           position: "fixed",
           bottom: 32,

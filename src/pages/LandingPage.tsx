@@ -125,6 +125,7 @@ const images: ReactImageGalleryProps["items"] = arrayShuffle([
   )
   .map((img) => ({
     original: img,
+    originalAlt: "Revita zdjęcie wnętrza placówki",
   }));
 
 const LandingPage: React.FC = function () {
@@ -136,18 +137,11 @@ const LandingPage: React.FC = function () {
       />
       <Container maxWidth="md">
         <ProminentText>
-          N .Z.O.Z. Revita Dukla to renomowany ośrodek specjalizujący się w
-          rehabilitacji. Nasza oferta zabiegów, terapii i masaży jest dedykowana
-          zarówno dla osób dorosłych, jak i dzieci. W naszej siedzibie spotkają
-          Państwo zespół wykwalifikowanych specjalistów, którzy posiadają bogate
-          doświadczenie w różnych dziedzinach, m.in. fizjoterapii, wczesnego
-          wspomagania rozwoju, rehabilitacji pourazowej, terapii SI, a także
-          pedagogiki i neurologopedii. Nasza praktyka oparta jest na
-          nowoczesnych i globalnie uznanych metodach medycyny. Każdy pacjent
-          otrzymuje spersonalizowany plan terapii, dostosowany do jego
-          konkretnych problemów i potrzeb. Dzięki temu możemy realnie wspierać
-          Państwa w powrocie do zdrowia, poprawie sprawności, redukcji
-          dolegliwości bólowych oraz leczeniu różnorodnych schorzeń.
+          N .Z.O.Z. Revita Dukla to renomowany ośrodek rehabilitacyjny oferujący
+          terapie dla dzieci i dorosłych. Nasz doświadczony zespół specjalistów
+          stosuje nowoczesne metody medycyny, tworząc spersonalizowane plany
+          terapii. Pomagamy pacjentom powrócić do zdrowia i poprawić sprawność
+          fizyczną, redukując dolegliwości bólowe.
         </ProminentText>
       </Container>
       <Container maxWidth="lg" sx={{ mt: 4 }}>

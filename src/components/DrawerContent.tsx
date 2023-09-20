@@ -68,7 +68,7 @@ const links: (
     component: MuiLink,
     target: "_blank",
     secondaryAction: (
-      <IconButton edge="end">
+      <IconButton edge="end" aria-label="Revita RODO">
         <OpenInNew />
       </IconButton>
     ),
@@ -94,6 +94,7 @@ const DrawerContent: React.FC = () => {
       >
         <Box
           component="img"
+          alt="Revita LOGO"
           src={logo}
           sx={{
             height: "100%",
@@ -105,7 +106,8 @@ const DrawerContent: React.FC = () => {
       <Divider />
       <List disablePadding>
         {links.map((link) => {
-          if (link === "divider") return <Divider key="divider" />;
+          if (link === "divider")
+            return <Divider key="divider" component="li" />;
           const { to, icon, text, component, target, secondaryAction } = link;
           return (
             <ListItem key={to} disablePadding secondaryAction={secondaryAction}>
@@ -129,7 +131,12 @@ const DrawerContent: React.FC = () => {
           alignItems: "center",
         }}
       >
-        <Typography variant="body2">
+        <Typography
+          variant="body2"
+          sx={(theme) => ({
+            color: theme.palette.getContrastText(theme.palette.primary.main),
+          })}
+        >
           @ {new Date().getFullYear()} N.Z.O.Z. Revita Dukla
         </Typography>
       </Toolbar>
