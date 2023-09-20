@@ -8,14 +8,17 @@ export interface HeroImageProps {
 const HeroImage: React.FC<HeroImageProps> = function ({ img, text }) {
   return (
     <Box
-      sx={{
+      sx={(theme) => ({
         height: "50vh",
-        maxHeight: 1280,
+        maxHeight: 600,
         backgroundImage: `url(${img})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         position: "relative",
-      }}
+        [theme.breakpoints.up("md")]: {
+          maxHeight: 1280,
+        },
+      })}
     >
       <Typography
         sx={(theme) => ({
